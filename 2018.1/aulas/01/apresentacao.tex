@@ -1,0 +1,228 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Apresentação da Disciplina} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{28 de março de 2018} }
+
+\logo{\includegraphics[width=1cm]{images/ufgJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\AtBeginSection{
+		\begin{frame}{Sumário}%[allowframebreaks]{Sumário}
+    		\tableofcontents[currentsection]
+    		%\tableofcontents[currentsection, hideothersubsections]
+		\end{frame}
+	}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Sobre a Disciplina}
+	\subsection{Professor}
+	\begin{frame}{Professor}
+		\begin{columns}
+			\column{.4\textwidth}  		
+			\begin{center}
+				\includegraphics[height=.5\textheight]{images/esdras.png}
+			\end{center}
+			\column{.6 \textwidth}  		
+			\begin{block}{Formação}
+				\begin{center}
+					{\normalsize {\bf Bacharel} em Sistemas de Informação\\
+						{\bf Mestre} em Representação Conhecimento (IA)}
+				\end{center}
+			\end{block}		  		
+			\begin{block}{Quem?}
+				\begin{center}
+					{\bf Esdras Lins Bispo Junior} \\ Recife, Pernambuco.
+				\end{center}
+			\end{block}
+		\end{columns}
+	\end{frame}
+	
+	\subsection{Informações Importantes}
+	\begin{frame}{Informações Importantes}
+		\begin{block}{Professor}
+			\begin{itemize}
+				\item Esdras Lins Bispo Jr.
+				\item \url{bispojr@ufg.br}
+				\item Sala 18, 1º Andar (Bloco Novo dos Professores)
+			\end{itemize}
+		\end{block}
+	\end{frame}	
+	
+	\begin{frame}{Informações Importantes}
+		\begin{block}{Disciplina}
+			\begin{itemize}
+				\item Lógica para Ciência da Computação
+				\item 09h30-11h10 (Quarta, [CA2, Sala 06])\\
+				09h30-11h10 (Quinta, [CA2, Sala 06])
+				\item Dúvidas: 07h30 - 09h00 (Segunda)\\
+				{\color{red}[é necessário confirmação comigo]}
+				\item Grupo: \url{facebook.com/groups/logica.ufj.2018.1/}
+				\item Repositório: \url{github.com/bispojr/logica}
+			\end{itemize}
+		\end{block}
+	\end{frame}	
+	
+	\begin{frame}{Informações Importantes}
+		\begin{center}
+			\includegraphics[width=\textwidth]{images/santa.jpg}
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}{Informações Importantes}
+		\begin{block}{Metodologia}
+			\begin{itemize}
+				\item Aulas expositivas e participativas;
+				\item Provas (???);
+				\item Testes (???);
+				\item Exercícios.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\subsection{Distintivos Digitais}
+	\begin{frame}{Distintivos Digitais}
+		\begin{block}{Como será?}
+			Os alunos que estiverem entre as dez melhores notas de cada avaliação receberão um distintivo digital.
+		\end{block} \pause
+		\begin{block}{Quantos distintivos existem?}
+			\begin{itemize}
+				\item {\sc Top One}
+				\item {\sc Top Five}
+				\item {\sc Top Ten}
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{Distintivos Digitais}
+		\begin{block}{}
+			\begin{center}
+				\includegraphics[height=.65\textheight]{images/badges/top-ten.png}
+			\end{center}		
+			Obter entre a 6ª e 10ª melhor nota da turma em uma avaliação. 
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{Distintivos Digitais}
+		\begin{block}{}
+			\begin{center}
+				\includegraphics[height=.65\textheight]{images/badges/top-five.png}
+			\end{center}		
+			Obter entre a 2ª  e 5ª melhor nota da turma em uma avaliação. 
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{Distintivos Digitais}
+		\begin{block}{}
+			\begin{center}
+				\includegraphics[height=.65\textheight]{images/badges/top-one.png}
+			\end{center}		
+			Obter a melhor nota da turma em uma avaliação. 
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{Distintivos Digitais}
+		\begin{block}{Pontuação}
+			\begin{itemize}
+				\item Obter um {\sc Top One}: 10 pontos;
+				\item Obter um {\sc Top Five}: 8 pontos;
+				\item Obter um {\sc Top Ten}: 6 pontos.
+			\end{itemize}
+		\end{block} \pause
+		\begin{exampleblock}{Na Prova Final...}
+			Os dez primeiros que obtiverem maior pontuação, nos quatro testes, ganharão medalhas.
+		\end{exampleblock} \pause
+		\begin{block}{Por que estamos usando distintivos digitais?}
+			\begin{itemize}
+				\item Pode aumentar a motivação dos alunos; \\ \pause
+				{\color{blue} (Estou pesquisando para saber se isto é verdade...)}
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{Informações Importantes}
+		\begin{block}{Conteúdo do Curso}
+			\begin{enumerate}
+				\item Lógica Proposicional;
+				\item Semântica da Lógica Proposicional;
+				\item Construção de Tabelas-Verdade;
+				\item Implicação Lógica e Argumento;
+				\item Demonstração e Dedução;
+				\item Satisfazibilidade;
+				\item Lógica de Predicados;
+				\item Programação Lógica.
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
