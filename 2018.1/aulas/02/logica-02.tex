@@ -1,0 +1,123 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Introdução à Lógica Proposicional} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{29 de março de 2018} }
+
+\logo{\includegraphics[width=1cm]{images/ufgJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Instrução pelos Colegas}
+	\begin{frame}{Questão 001}
+		\begin{block}{[SELECON - 2018]}
+			Considere a seguinte afirmação:
+			\begin{center}
+				Marta é paulista ou Carlos é mineiro.
+			\end{center}
+		A negação lógica dessa sentença é:
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Marta é mineira e Carlos é paulista.
+			\item Marta não é mineira ou Carlos não é paulista.
+			\item {\color{blue} Marta não é paulista e Carlos não é mineiro.}
+			\item Marta não é paulista ou Carlos não é mineiro.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 002}		
+		\begin{block}{[POSCOMP 2016]}
+			Se Daniel fala dinamarquês, então eu falo inglês ou alemão. Se eu não falo alemão e nem inglês, então:
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Eu falo dinamarquês.
+			\item Eu não falo dinamarquês.
+			\item {\color{blue} Daniel não fala dinamarquês.}
+			\item Daniel fala inglês.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 003}			
+		\begin{block}{[Q003]}
+			Qual das frases abaixo é uma proposição?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item {\color{blue} Dez é menor do que sete.}
+			\item Como vai você?
+			\item Ela é muito talentosa.
+			\item Que dia bonito!	
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
