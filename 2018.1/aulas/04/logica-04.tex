@@ -1,0 +1,165 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Introdução à Lógica Proposicional} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{04 de abril de 2018} }
+
+\logo{\includegraphics[width=1cm]{images/ufgJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Instrução pelos Colegas}
+	
+	\begin{frame}{Questão 008}
+		\begin{block}{[POSCOMP 2014]}
+			 Considere as premissas a seguir.
+			 \\
+			 1. Se A = B então B = C. \\
+			 2. B $\not=$ C. \\
+			 3. Se C > D então D < E. \\
+			 4. F $\not=$ G e A = B. \\
+			 5. A = B ou C > D. \\
+			 
+			 \vspace*{0.1cm}
+			 
+			Assinale a alternativa que apresenta, corretamente, a conclusão.
+		\end{block}
+
+		\begin{enumerate}[label=(\Alph*)]
+			\item F $\not=$ G.
+			\item F $\not=$ G e D < E.
+			\item A = B.
+			\item B = C ou D < E	
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 008}
+		\begin{alertblock}{Problema!!!}
+			Questão mal-formulada!
+		\end{alertblock}
+		\begin{center}
+			\includegraphics[width=\textwidth]{images/poscomp}
+		\end{center}
+	\end{frame}
+	
+	
+	\begin{frame}{Questão 009}	
+		\begin{block}{[Gersting]}
+			``Há falha na rede'' e ``A chave geral para de funcionar'' são as proposições $A$ e $B$, respectivamente. Seja a proposição ``Uma condição suficiente para a falha de uma rede é que a chave geral pare de funcionar''. Ela pode ser representada por...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $A \rightarrow B$
+			\item {\color{blue} $B \rightarrow A$}
+			\item $A \wedge B$
+			\item $B \vee A$	
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 011}	
+		\begin{block}{[Gersting]}
+			``Há uma boa dieta'' e ``Há um gato saudável'' são as proposições $A$ e $B$, respectivamente. Seja a proposição ``Uma boa dieta é uma condição necessária para um gato saudável.''. Ela pode ser representada por...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $A \rightarrow B$
+			\item $B' \rightarrow A'$
+			\item $A \wedge B$
+			\item {\color{blue} $B' \vee A$}	
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 013}	
+		\begin{block}{[Gersting]}
+			Qual das frases a seguir representa $A'$, se $A$ é a sentença\\ ``Júlio adora manteiga mas detesta nata''?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Júlio detesta manteiga e nata.
+			\item {\color{blue} Júlio detesta manteiga ou adora nata.} 
+			\item Júlio não gosta de manteiga ou nata.
+			\item Júlio não gosta de manteiga mas adora nata.				
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 014}	
+		\begin{block}{[Gersting]}
+			Qual a expressão equivalente para $A \vee B'$?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $A \wedge (B')$
+			\item $(A \wedge B)'$
+			\item {\color{blue} $A \vee (B')$} 
+			\item $(A \vee B)'$				
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
