@@ -1,0 +1,144 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Introdução à Lógica Proposicional} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{19 de abril de 2018} }
+
+\logo{\includegraphics[width=1cm]{images/ufgJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Instrução pelos Colegas}
+	
+	\begin{frame}{Questão 026}	
+		\begin{block}{[Gersting]}
+			Seja $R$ a proposição $A \wedge A' \rightarrow B$. A proposição equivalente a $R$ é...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $0$
+			\item {\color{blue} $1$}
+			\item $A \rightarrow B$
+			\item $A' \rightarrow B$
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 027}	
+		\begin{block}{[Gersting]}
+			Seja $R$ a proposição $P \vee P' \rightarrow Q $. A proposição equivalente a $R$ é...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $0$
+			\item $1$
+			\item $P \rightarrow Q$
+			\item {\color{blue} $Q$}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 028}	
+		\begin{block}{[Gersting]}
+			Seja $R$ a proposição $(A \rightarrow B) \rightarrow B$. A proposição equivalente a $R$ é...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item {\color{blue} $(B' \rightarrow A') \rightarrow B$}
+			\item $(B \rightarrow A) \rightarrow B$
+			\item $(A \rightarrow B) \vee B$
+			\item $(A \rightarrow B) \wedge B$
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 029}	
+		\begin{block}{[Gersting]}
+			Seja $R$ a proposição $A \vee (B \wedge C)$. A proposição equivalente a $R$ é...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $A \wedge (B \vee C)$
+			\item $(A \wedge B) \vee (A \wedge C)$
+			\item {\color{blue} $(A \vee B) \wedge (A \vee C)$}
+			\item $A \vee B \wedge C$
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 030}	
+		\begin{block}{[Gersting]}
+			Seja $R$ a proposição $A \rightarrow (B \rightarrow C)$. A proposição equivalente a $R$ é...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $A \rightarrow (C \rightarrow B)$
+			\item $A \rightarrow (B \wedge C)$
+			\item $(A \vee B) \rightarrow C$
+			\item {\color{blue} $(A \wedge B) \rightarrow C$}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
