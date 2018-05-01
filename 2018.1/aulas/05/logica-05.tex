@@ -1,0 +1,141 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Introdução à Lógica Proposicional} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{11 de abril de 2018} }
+
+\logo{\includegraphics[width=1cm]{images/ufgJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Instrução pelos Colegas}
+	\begin{frame}{Questão 015}	
+		\begin{block}{[Gersting]}
+			Qual a expressão equivalente para $A \rightarrow C \wedge B'$?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $(A \rightarrow (C \wedge B))'$
+			\item $A \rightarrow (C \wedge B)'$
+			\item $(A \rightarrow C) \wedge (B')$ 
+			\item {\color{blue} $A \rightarrow (C \wedge (B'))$}				
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 016}	
+		\begin{block}{[Gersting]}
+			Qual a expressão equivalente para $D \leftrightarrow C \wedge A' \vee B$?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item {\color{blue} $D \leftrightarrow ((C \wedge (A')) \vee B)$}
+			\item $(D \leftrightarrow C) \wedge ((A') \vee B)$
+			\item $(D \leftrightarrow (C \wedge A)') \vee B$ 
+			\item $D \leftrightarrow ((C \wedge A)' \vee B)$				
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 017}	
+		\begin{block}{[Gersting]}
+			Qual a alternativa que {\bf não} corresponde a um conectivo binário na lógica proposicional?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $\wedge$
+			\item $\vee$
+			\item {\color{blue} $\neg$} 
+			\item $\leftrightarrow$				
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 018}	
+		\begin{block}{[Gersting]}
+			Os valores-verdade para as proposições $A$, $B$ e $C$ são V, F e V, respectivamente. Logo, o valor-verdade da proposição $A \rightarrow C \wedge B'$ é...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item {\color{blue}  Verdadeiro}
+			\item Falso
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 019}	
+		\begin{block}{[Gersting]}
+			Quantas possibilidades terá a tabela-verdade da proposição $A \rightarrow C \wedge B'$?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item 4
+			\item {\color{blue} 8}
+			\item 3
+			\item 2
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
