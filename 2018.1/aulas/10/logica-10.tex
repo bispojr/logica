@@ -1,0 +1,145 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Quantificadores e Predicados} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{28 de junho de 2018} }
+
+\logo{\includegraphics[width=1cm]{images/ufgJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Instrução pelos Colegas}
+
+	\begin{frame}{Questão 045}	
+		\begin{block}{[Gersting]}
+			É possível achar uma interpretação na qual  $(\forall x) P(x)$ seja verdadeiro e $(\exists x) P(x)$ seja falso?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Sim
+			\item {\color{blue} Não}
+			\item Depende do valor de $x$.
+			\item Depende da propriedade $P(x)$.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 046}	
+		\begin{block}{[Gersting]}
+			É possível achar uma interpretação na qual tanto $(\forall x) P(x)$ e $(\exists x) P(x)$ sejam verdadeiros?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item {\color{blue} Sim}
+			\item Não
+			\item Depende do valor de $x$.
+			\item Depende da propriedade $P(x)$.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 047}	
+		\begin{block}{[Gersting]}
+			Admita $Q(x,y)$ como o predicado $x > y$ e o domínio de interpretação sendo todos os números inteiros. A única alternativa {\bf incorreta} é
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			
+			\item $(\exists x)(\forall x)Q(x,x)$ é falso.
+			\item O valor-verdade de $(\exists x)(\forall y)Q(x,y)$ \\é o mesmo de $(\exists u)(\forall t)Q(u,t)$.
+			\item {\color{blue} O valor-verdade de $(\exists x)(\forall y)Q(x,y)$ \\é o mesmo de $(\forall y)(\exists x)Q(x,y)$.}
+			\item $Q(x,y)$ é um predicado binário.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 048}	
+		\begin{block}{[Gersting]}
+			Admita $Q(x,y)$ como o predicado $x > y$ e o domínio de interpretação sendo todos os números inteiros. O símbolo $a$ é uma constante em que o seu valor é 7. Sobre a expressão $(\forall z)Q(z,a)$, é {\bf correto} afirmar que
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Não está corretamente escrita, pois não é possível usar constantes nos predicados.
+			\item É verdadeira, se o domínio de interpretação for o número reais.
+			\item É verdadeira.
+			\item {\color{blue} É falsa.}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 049}	
+		\begin{block}{[Gersting]}
+			Qual dos itens a seguir {\bf não} compõe uma interpretação de uma expressão envolvendo predicados? 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item um conjunto de objetos chamados o domínio da interpretação, que deve conter pelo menos um elemento;
+			\item a atribuição de uma propriedade dos objetos do domínio para cada predicado na expressão; 
+			\item {\color{blue} uma valoração para todas as proposições decorrentes da expressão em questão.}
+			\item a atribuição de um objeto particular no domínio a cada símbolo constante na expressão.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
