@@ -1,0 +1,136 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Introdução à Lógica Proposicional} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{02 de maio de 2018} }
+
+\logo{\includegraphics[width=1cm]{images/ufgJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Instrução pelos Colegas}
+	
+	\begin{frame}{Questão 031}	
+		\begin{block}{[Gersting]}
+			Sejam $P$ a expressão ``$x > 5$'' e $Q$ a expressão ``$y < 3$''. \\Em Pascal, a expressão $P \vee Q'$ é dada por...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item {\bf not}($x > 5$ {\bf or} $y < 3$)
+			\item $x > 5$ {\bf or} $y < 3$ {\bf not}
+			\item {\color{blue} $x > 5$ {\bf or} {\bf not} $y < 3$}
+			\item {\bf not} $x > 5$ {\bf or} $y < 3$
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 032}	
+		\begin{block}{[Gersting]}
+			A expressão em Pascal 
+			\begin{center}
+				$x > 5$ {\bf and not} $x > 5$ {\bf or} $y < 3$
+			\end{center}
+			pode ser simplificada para 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $x > 5$
+			\item {\color{blue} $y < 3$}
+			\item {\it false}
+			\item não pode ser simplificada
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 033}	
+		\begin{block}{[Gersting]}
+			A proposição $(A \rightarrow B) \rightarrow (B' \rightarrow A')$ é uma tautologia, pois
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $A \rightarrow B$ sempre é verdadeira.
+			\item $B' \rightarrow A'$ nunca é falsa.
+			\item é impossível um condicional assumir valor-verdade falso.
+			\item {\color{blue} é impossível $A \rightarrow B$ ser verdadeira e $B' \rightarrow A'$ ser falsa.}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 034}	
+		\begin{block}{[Gersting]}
+			A proposição $(A \rightarrow (B \rightarrow C)) \rightarrow (A \wedge B \rightarrow C)$ é uma tautologia?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item {\color{blue} Sim}
+			\item Não
+			\item Depende apenas do valor de $B$.
+			\item não é possível definir.
+	\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
