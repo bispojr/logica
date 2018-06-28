@@ -1,0 +1,211 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Quantificadores e Predicados} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{03 de maio de 2018} }
+
+\logo{\includegraphics[width=1cm]{images/ufgJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Instrução pelos Colegas}
+
+	\begin{frame}{Questão 035}	
+		\begin{block}{[Gersting]}
+			A proposição $(A' \vee B') \rightarrow (A \rightarrow B)$ é uma tautologia?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Sim
+			\item {\color{blue} Não}
+			\item Depende apenas do valor de $A$.
+			\item não é possível definir.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 036}	
+		\begin{block}{[Gersting]}
+			A sentença ``Para todo x, x > 0'' deve ser simbolizada de que forma?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $(\exists x > 0)$
+			\item $(\forall x > 0)$
+			\item $(\exists x)(x > 0)$
+			\item {\color{blue} $(\forall x)(x > 0)$}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 037}	
+		\begin{block}{[Gersting]}
+			Na sentença $(\forall x)(x > 0)$, a parte do $(x > 0)$ é chamada de 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item {\color{blue} predicado}
+			\item proposição
+			\item quantificador universal
+			\item domínio de interpretação
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 038}	
+		\begin{block}{[Gersting]}
+			A notação comum utilizada para representar um predicado que ainda não foi especificado que a variável $x$ possa ter é...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $?? x ??$
+			\item $x^{??}$
+			\item {\color{blue} $P(x)$}
+			\item $x^P$
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 039}	
+		\begin{block}{[Gersting]}
+			O conjunto de objetos sobre o qual o valor-verdade da expressão  $(\forall x)(x > 0)$ pode ser julgado é chamado de...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item elementos de números
+			\item elementos de interpretação
+			\item domínio de números
+			\item {\color{blue} domínio de interpretação}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 040}	
+		\begin{block}{[Gersting]}
+			Admitindo que o domínio de interpretação da expressão $(\forall x)(x > 0)$ são os números inteiros, o seu valor-verdade é...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Verdadeiro
+			\item {\color{blue} Falso}
+			\item Este domínio não se aplica ao caso.
+			\item Não é possível definir.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 041}	
+		\begin{block}{[Gersting]}
+			Para a expressão não especificada $(\forall x) P(x)$, admita que o domínio de interpretação consista em todos os livros de nossa biblioteca
+			local, e $P(x)$ seja a propriedade de que $x$ deve ter capa vermelha. Qual o valor-verdade desta expressão?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Verdadeiro
+			\item {\color{blue} Falso}
+			\item Este domínio não se aplica ao caso.
+			\item Não é possível definir.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 042}	
+		\begin{block}{[Gersting]}
+			Para a expressão não especificada $(\forall x) P(x)$, admita as duas interpretações seguintes:
+			\begin{enumerate}[label=(\roman*)]
+				\item $P(x)$ é a propriedade de que $x$ seja uma ave e o domínio de interpretação é o conjunto de todos os pássaros.
+				\item $P(x)$ é a propriedade de que $x$ seja positivo ou negativo e o domínio de interpretação consiste em todos os
+				inteiros.
+			\end{enumerate}
+			O valor-verdade nas interpretações (i) e (ii) são, respectivamente,...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Falso e Verdadeiro
+			\item Falso e Falso
+			\item Verdadeiro e Verdadeiro
+			\item {\color{blue} Verdadeiro e Falso}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 043}	
+		\begin{block}{[Gersting]}
+			A sentença ``Existe um x tal que x > 0'' deve ser simbolizada de que forma?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $(\exists x > 0)$
+			\item $(\forall x > 0)$
+			\item {\color{blue} $(\exists x)(x > 0)$}
+			\item $(\forall x)(x > 0)$
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 044}	
+		\begin{block}{[Gersting]}
+			Admitindo que o domínio de interpretação da expressão $(\exists x)(x > 0)$ é o conjunto $\{-234, -10, -3, 1, 12, 0\}$, o seu valor-verdade é...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item {\color{blue} Verdadeiro}
+			\item Falso
+			\item Este domínio não se aplica ao caso.
+			\item Não é possível definir.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
