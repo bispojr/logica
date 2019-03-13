@@ -1,0 +1,274 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Apresentação da Disciplina} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{esdraspiano@gmail.com}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{13 de março de 2019} }
+
+\logo{\includegraphics[width=1.5cm]{images/ufjJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\AtBeginSection{
+		\begin{frame}{Sumário}%[allowframebreaks]{Sumário}
+    		\tableofcontents[currentsection]
+    		%\tableofcontents[currentsection, hideothersubsections]
+		\end{frame}
+	}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Sobre a Disciplina}
+	\subsection{Professor}
+	\begin{frame}{Professor}
+		\begin{columns}
+			\column{.4\textwidth}  		
+			\begin{center}
+				\includegraphics[height=.5\textheight]{images/eu.jpg}
+			\end{center}
+			\column{.6 \textwidth}  		
+			\begin{block}{Quem?}
+				\begin{center}
+					{\bf Esdras Lins Bispo Junior} \\ Recife, Pernambuco.
+				\end{center}
+			\end{block}
+			\begin{block}{Formação}
+				\begin{center}
+					{\normalsize {\bf Bacharel} em Sistemas de Informação\\
+						{\bf Mestre} em Repr. Conhecimento (IA)}
+				\end{center}
+			\end{block}	
+			\begin{block}{Linha de Pesquisa}
+				Educação de Computação
+			\end{block}
+		\end{columns}
+	\end{frame}
+	
+	\subsection{Informações Importantes}
+	\begin{frame}{Informações Importantes}
+		\begin{block}{Professor}
+			\begin{itemize}
+				\item Esdras Lins Bispo Jr.
+				\item \url{esdraspiano@gmail.com}
+				\item Sala 18, 1º Andar (Bloco dos Professores, próx. CA2)
+			\end{itemize}
+		\end{block}
+	\end{frame}	
+	
+	\begin{frame}{Informações Importantes}
+		\begin{block}{Disciplina}
+			\begin{itemize}
+				\item Lógica para Ciência da Computação
+				\item 13h30-15h10 (Terça, [CA2, Sala 10])\\
+				 17h20-19h00 (Quarta, [CA2, Sala 10])
+				\item Dúvidas: 07h30 - 09h10 (Terça)\\
+				{\color{red}[é necessário confirmação comigo]}
+				\item Grupo: \url{facebook.com/groups/logica.ufj.2019.1/}
+				\item Repositório: \url{github.com/bispojr/logica}
+			\end{itemize}
+		\end{block}
+	\end{frame}	
+	
+	\begin{frame}{Informações Importantes}
+		\begin{block}{Metodologia}
+			\begin{itemize}
+				\item Instrução pelos Colegas (IpC);
+				\item Exercícios em Sala;
+				\item Quiz;
+				\item Listas de Exercícios.
+				\item Mini-Testes;
+				\item Prova.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Plickers}
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/plickers}
+	\end{center}
+\end{frame}
+	
+	\begin{frame}{Metodologia IpC}
+		\begin{center}
+			\includegraphics[height=.7\textheight]{images/fluxo-ipc}
+		\end{center}
+	\end{frame}
+
+		\begin{frame}{Rotina Acadêmica}
+			\begin{block}{Estudo Prévio}
+				Antes de cada aula, haverá um material disponível para estudo prévio.
+			\end{block}	\pause		
+			\begin{block}{{\it Quiz} (QZ)}
+				Antes de cada aula, será necessário responder a um {\it quiz} sobre o conteúdo a ser trabalhado.
+			\end{block} \pause
+			\begin{block}{Questões Conceituais IpC (QC)}
+				Toda aula haverá questões conceituais abordadas em sala.
+			\end{block}
+		\end{frame}
+	
+	\begin{frame}{Canvas AVA - Login}
+		\begin{center}
+			\includegraphics[width=.7\textwidth]{images/canvas-login}
+			\url{canvas.instructure.com}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Canvas AVA - Formulário}
+		\begin{center}
+			\includegraphics[width=.8\textwidth]{images/canvas-register}
+			\url{canvas.instructure.com/register_from_website}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Canvas AVA - Formulário}
+		\begin{center}
+			\includegraphics[width=.8\textwidth]{images/canvas-form}
+			\url{canvas.instructure.com/register_from_website}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Canvas AVA - Visão do Aluno}
+		\begin{center}
+			\includegraphics[width=\textwidth]{images/canvas-aluno}
+			\url{canvas.instructure.com}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Canvas AVA - Android}
+		\begin{center}
+			\includegraphics[width=\textwidth]{images/canvas-android}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Canvas AVA - iOS}
+		\begin{center}
+			\includegraphics[width=\textwidth]{images/canvas-ios}
+		\end{center}
+	\end{frame}
+
+	\section{Instrumentos de Avaliação}
+	\begin{frame}{Instrumentos de Avaliação}
+
+		\begin{block}{Mini-Testes}
+			\begin{itemize}
+				\item MT$_1$ $\Rightarrow$ 20\% da pontuação total;
+				\item MT$_2$ $\Rightarrow$ 20\% da pontuação total;
+				\item MT$_3$ $\Rightarrow$ 20\% da pontuação total;
+				\item MT$_4$ $\Rightarrow$  20\% da pontuação total.
+			\end{itemize}
+		\end{block}
+	
+	\end{frame}
+
+	\begin{frame}{Instrumentos de Avaliação}
+	
+	\begin{block}{Prova Final (PF) - 20\% da pontuação total}
+		A PF é composta por duas etapas: a PF$_1$ e a PF$_2$. 
+		A PF$_1$ é composta por dois mini-testes de caráter substitutivo: \pause 
+		\begin{itemize}
+			\item o SMT$_1$ (referente ao MT$_1$), e 
+			\item o SMT$_2$ (referente ao MT$_2$).
+		\end{itemize} \pause
+		Por sua vez, a PF$_2$ é composta pelos outros dois mini-testes também de caráter substitutivo:  \pause
+		\begin{itemize}
+			\item o SMT$_3$ (referente ao MT$_3$), e 
+			\item o SMT$_4$ (referente ao MT$_4$).
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Avaliação}
+	\begin{block}{Média Final}
+		O cálculo da média final será dada da seguinte forma:
+		\begin{itemize}
+			\item MF = MIN(10, PONT)
+		\end{itemize}
+		em que MIN representa o mínimo entre dois valores e PONT representa a pontuação total obtida em toda a disciplina, dada da seguinte forma:
+		\begin{center}
+			PONT = $\left[ \sum\limits_{i=1}^{4} \mbox{max}(MT_i, SMT_i) + PF \right] \times 0,2 + QC + QZ$
+		\end{center}
+	\end{block} \pause
+	\begin{exampleblock}{Previsão de Término das Atividades}
+		17 de julho de 2019
+	\end{exampleblock}
+\end{frame}
+	
+	\begin{frame}{Informações Importantes}
+		\begin{block}{Conteúdo do Curso}
+			\begin{enumerate}
+				\item Lógica Proposicional;
+				\item Relações em Lógica Proposicional;
+				\item Demonstrações;
+				\item Lógica de Predicados.
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
