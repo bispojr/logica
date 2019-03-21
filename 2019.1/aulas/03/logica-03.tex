@@ -1,0 +1,280 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+\usepackage{colortbl}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Operações Lógicas sobre Proposições} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{esdraspiano@gmail.com}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{20 de março de 2019} }
+
+\logo{\includegraphics[width=1cm]{images/ufjJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Instrução pelos Colegas}
+	
+	\begin{frame}{Operações Lógicas}
+		\begin{block}{Características}
+			Obedecem a regras do cálculo proposicional.
+		\end{block} \pause
+		\begin{block}{Algumas operações lógicas...}
+			\begin{itemize}[label=-]
+				\item Negação;
+				\item Conjunção;
+				\item Disjunção;
+				\item Disjunção exclusiva;
+				\item Condicional;
+				\item Bicondicional.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Negação}
+		\begin{block}{Definição}
+			Chama-se de {\bf negação de uma proposição} $p$ a proposição representada por ``não $p$''.
+		\end{block} \pause
+		\begin{block}{Notação}
+			$\sim p$
+		\end{block} \pause
+		\begin{block}{Semântica}
+			\begin{center}
+				\begin{tabular}{|c|c|}
+					\hline
+					$p$	&	$\sim p$	\\
+					\hline
+					V	&	F	\\
+					F	&	V	\\
+					\hline
+				\end{tabular}
+			\end{center}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Negação}
+		\begin{block}{Exemplos}
+			\begin{itemize}
+				\item $p$: Santa Cruz é melhor do que o Sport.\\
+				$\sim p$: Santa Cruz {\bf não} é melhor do que o Sport.
+				\item \pause
+				\item $q$: O professor de Lógica é o mais bonito da UFJ.\\
+				$\sim q$: {\bf É falso} que o professor de Lógica \\\hspace*{0.9cm}é o mais bonito da UFJ.
+			\end{itemize}
+		\end{block}
+\end{frame}
+
+\begin{frame}{Questão 007}
+\begin{block}{[Q007]}
+	Qual o valor lógico da proposição \\
+	``Não é verdade que 12 é um número ímpar''?
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item Verdadeiro.
+	\item Falso.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Conjunção}
+	\begin{block}{Definição}
+		Chama-se de {\bf conjunção de duas proposições} $p$ e $q$ a proposição representada por ``$p$ e $q$''.
+	\end{block} \pause
+	\begin{block}{Notação}
+		$p \wedge q$
+	\end{block} \pause
+	\begin{block}{Semântica}
+		\begin{center}
+			\begin{tabular}{|cc|c|}
+				\hline
+				$p$	&	$q$	&	$p \wedge q$	\\
+				\hline
+				V	&	V	&	V	\\
+				V	&	F	&	F	\\
+				F	&	V	&	F	\\
+				F	&	F	&	F	\\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Conjunção}
+	\begin{block}{Exemplo}
+		\begin{itemize}
+			\item $p$: Rivaldo foi revelado no Santa Cruz. \hspace*{0.9cm} (V)\\
+			$q$: Neymar é melhor do que Cristiano Ronaldo. \hspace*{0.9cm} (F)\\
+			\hrule
+			\item \pause
+			\item $p \wedge q$: Rivaldo foi revelado no Santa Cruz e Neymar é melhor do que Cristiano Ronaldo.\\ \pause
+			\item $V(p \wedge q) = \pause V(p) \wedge V(q) = \pause V \wedge F = \pause F$
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Questão 008}
+\begin{block}{[Q008]}
+	Sejam $p$ e $q$ duas proposições. Se $V(p \wedge q) = V$, logo podemos afirmar que
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item $V(p) = F$
+	\item $V(p) = V$
+	\item $V(q) = F$
+	\item Não é possível definir a valoração das proposições.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Disjunção}
+	\begin{block}{Definição}
+		Chama-se de {\bf disjunção de duas proposições} $p$ e $q$ a proposição representada por ``$p$ ou $q$''.
+	\end{block} \pause
+	\begin{block}{Notação}
+		$p \vee q$
+	\end{block} \pause
+	\begin{block}{Semântica}
+		\begin{center}
+			\begin{tabular}{|cc|c|}
+				\hline
+				$p$	&	$q$	&	$p \vee q$	\\
+				\hline
+				V	&	V	&	V	\\
+				V	&	F	&	V	\\
+				F	&	V	&	V	\\
+				F	&	F	&	F	\\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Disjunção}
+\begin{block}{Exemplo}
+\begin{itemize}
+	\item $p$: Rivaldo foi revelado no Santa Cruz. \hspace*{0.9cm} (V)\\
+	$q$: Neymar é melhor do que Cristiano Ronaldo. \hspace*{0.9cm} (F)\\
+	\hrule
+	\item \pause
+	\item $p \vee q$: Rivaldo foi revelado no Santa Cruz ou Neymar é melhor do que Cristiano Ronaldo.\\ \pause
+	\item $V(p \vee q) = \pause V(p) \vee V(q) = \pause V \vee F = \pause V$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Questão 009}
+\begin{block}{[Q009]}
+	Sejam as proposições $p$: ``Está frio'' e $q$: ``Está chovendo''. Em linguagem natural, $\sim p$ $\wedge \sim q$ é traduzida como 
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item Não está calor ou nem está chovendo.
+	\item Não está frio ou nem está chovendo.
+	\item Não está calor e nem está chovendo.
+	\item Não está frio e nem está chovendo.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Questão 010}
+\begin{block}{[Q010]}
+	Sejam as proposições $p$: ``Jorge é rico'' e $q$: ``Carlos é feliz''. \\Em linguagem simbólica, ``Jorge não é rico, mas Carlos é feliz'' é expresso como
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item $\sim p \vee q$
+	\item $\sim p$ $\vee \sim q$
+	\item $\sim p \wedge q$
+	\item $\sim p$ $\wedge \sim q$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Questão 011}
+\begin{block}{[Q011]}
+	Sejam $p$ e $q$ duas proposições. Se $V(\sim p \vee q) = V$ e $V(p) = F$, logo podemos afirmar que
+\end{block}
+
+	\begin{enumerate}[label=(\Alph*)]
+		\item $V(q) = F$
+		\item $V(q) = V$
+		\item $V(p) = V$
+		\item Não é possível definir $V(q)$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Questão 012}
+\begin{block}{[Q012]}
+	Sejam $p$ e $q$ duas proposições. Se $V(p \vee q) = V$ e $V(p \wedge q) = F$, logo podemos afirmar que
+\end{block}
+
+\begin{enumerate}[label=(\Alph*)]
+	\item Pelo menos uma das duas proposições é falsa. 
+	\item $V(p) = V$
+	\item $V(q) = V$
+	\item Não é possível afirmar nada sobre as proposições.
+\end{enumerate}
+\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
