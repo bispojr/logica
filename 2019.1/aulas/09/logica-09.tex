@@ -1,0 +1,206 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+\usepackage{colortbl}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\usepackage{pifont}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Tautologias, Contradições e Contingências} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{esdraspiano@gmail.com}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{24 de abril de 2019} }
+
+\logo{\includegraphics[width=1cm]{images/ufjJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Classificação de Proposições}
+	
+	\begin{frame}{Tautologia}
+		\begin{block}{Definição}
+			Chama-se de {\bf tautologia} toda a proposição composta cuja última coluna da sua tabela-verdade encerra somente a letra V (verdade).
+		\end{block} \pause
+		\begin{block}{Outras denominações}
+			Proposições tautológicas ou proposições logicamente verdadeiras.
+		\end{block} \pause
+		\begin{exampleblock}{Exemplos}
+			\begin{itemize} \pause
+				\item $p \leftrightarrow p$ \pause
+				\item $\sim (p$ $\wedge \sim p)$ \pause
+				\item $p$ $\vee \sim p$
+			\end{itemize}
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Questão 018}
+		\begin{block}{[Q018]}
+			Pode-se afirmar, em relação à proposição $\sim p \vee q$, que 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item é uma tautologia.
+			\item não é uma tautologia.
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}{Princípio de Substituição para as Tautologias}
+		\begin{block}{Princípio}
+			Se $P(p,q,r, \ldots)$ é uma tautologia, então $P(P_0, Q_0, R_0, \ldots)$ também é uma tautologia.
+		\end{block} \pause
+		\begin{exampleblock}{Exemplos}
+			\begin{itemize} \pause
+				\item $(r \vee s) \leftrightarrow (r \vee s)$ \pause
+				\item $\sim ((\sim t)$ $\wedge \sim (\sim t))$ \pause
+				\item $(p \wedge r)$ $\vee \sim (p \wedge r)$
+			\end{itemize}
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Questão 019}
+		\begin{block}{[Q019]}
+			Pode-se afirmar, em relação à proposição $\sim (p \rightarrow r) \vee (p \rightarrow r)$, que 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item é uma tautologia.
+			\item não é uma tautologia.
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}{Contradição}
+		\begin{block}{Definição}
+			Chama-se de {\bf contradição} toda a proposição composta cuja última coluna da sua tabela-verdade encerra somente a letra F (falsidade).
+		\end{block} \pause
+		\begin{block}{Outras denominações}
+			Proposições contraválidas ou proposições logicamente falsas.
+		\end{block} \pause
+		\begin{exampleblock}{Exemplos}
+			\begin{itemize} \pause
+				\item $p$ $\wedge \sim p$ \pause
+				\item $p \leftrightarrow$ $\sim p$ \pause
+				\item $\sim p$ $\wedge$ $(p$ $\wedge$ $\sim q)$
+			\end{itemize}
+		\end{exampleblock} \pause
+		\begin{block}{Substituição}
+			Há um princípio de substituição semelhante para as contradições.
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Questão 020}
+		\begin{block}{[Q020]}
+			Pode-se afirmar, em relação à proposição $p \leftrightarrow q$, que 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item é uma tautologia
+			\item é uma contradição
+			\item não é uma contradição
+			\item nenhuma das anteriores
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Contingência}
+		\begin{block}{Definição}
+			Chama-se de {\bf contingência} toda a proposição composta cuja última coluna da sua tabela-verdade figuram as letras V e F cada uma pelo menos uma vez..
+		\end{block} \pause
+		\begin{block}{Outras denominações}
+			Proposições contingentes ou proposições indeterminadas.
+		\end{block} \pause
+		\begin{exampleblock}{Exemplos}
+			\begin{itemize} \pause
+				\item $p$ $\rightarrow \sim p$ \pause
+				\item $p \vee q \rightarrow p$ \pause
+			\end{itemize}
+		\end{exampleblock}
+	\end{frame}
+	
+	\begin{frame}{Questão 021}
+		\begin{block}{[Q021]}
+			Pode-se afirmar, em relação à proposição $(p \rightarrow p) \vee (p \rightarrow$ $\sim p)$, que 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item é uma tautologia
+			\item é uma contradição
+			\item é uma contraválida
+			\item é uma contingência
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 022}
+		\begin{block}{[Q022]}
+			Pode-se afirmar, em relação à proposição $p \vee (q$ $\wedge \sim p)$, que 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item é uma tautologia
+			\item é uma contradição
+			\item é logicamente verdadeira
+			\item é uma contingência
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
