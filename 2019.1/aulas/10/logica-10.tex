@@ -1,0 +1,224 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+\usepackage{colortbl}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\usepackage{pifont}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Implicação Lógica} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{esdraspiano@gmail.com}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{30 de abril de 2019} }
+
+\logo{\includegraphics[width=1cm]{images/ufjJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Implicação Lógica}
+	
+	\begin{frame}{Implicação Lógica}
+		\begin{block}{Definição}
+			Diz-se que uma proposição $P(p,q,r, \ldots)$ implica logicamente ou apenas {\bf implica} uma proposição $Q(p,q,r, \ldots)$, se $Q$ é verdadeira (V) todas as vezes que $P$ for verdadeira (V).
+		\end{block} \pause
+		\begin{block}{Notação}
+			$P(p, q, r, \ldots) \Rightarrow Q(p,q,r, \ldots)$
+		\end{block} \pause
+		\begin{block}{Exemplos}
+			\begin{itemize}
+				\item $p \wedge q \Rightarrow q$ \ \ e \ \ $(p \vee q) \wedge \sim q \Rightarrow p$
+			\end{itemize}
+		\end{block}
+		\begin{exampleblock}{Caso particular}
+			\begin{itemize}
+				\item Toda proposição implica uma tautologia.
+				\item Somente uma contradição implica uma contradição.
+			\end{itemize}			
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Questão 023}
+		\begin{block}{[Q023]}
+			Qual das alternativas abaixo é {\bf falsa}? 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $p \wedge q \Rightarrow p$
+			\item $q \Rightarrow p \vee q$
+			\item $q \Rightarrow p \wedge q$
+			\item $p \wedge q \Rightarrow p \wedge q$
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 024}
+		\begin{block}{[Q024]}
+			Qual das alternativas abaixo é {\bf verdadeira}? 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $p \Rightarrow p \rightarrow q$
+			\item $q \Rightarrow p \rightarrow q$
+			\item $p \rightarrow q \Rightarrow q$
+			\item $p \rightarrow q \Rightarrow p$
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Propriedades}
+		\begin{block}{Reflexiva}
+			$P(p, q, r, \ldots) \Rightarrow P(p,q,r, \ldots)$
+		\end{block} \pause
+		\begin{block}{Transitiva}
+			\begin{itemize}
+				\item  {\bf Se} $P(p, q, r, \ldots) \Rightarrow Q(p,q,r, \ldots)$ \pause
+				\item  {\bf e} $Q(p, q, r, \ldots) \Rightarrow R(p,q,r, \ldots)$ {\bf então}
+				\hrule \pause
+				\item $P(p, q, r, \ldots) \Rightarrow R(p,q,r, \ldots)$
+			\end{itemize}
+		\end{block} \pause
+		\begin{exampleblock}{Exemplos}
+			\begin{itemize}
+				\item $p \vee q \Rightarrow p \vee q$ 
+				\item $p \wedge q \Rightarrow p$
+				\item $p \Rightarrow p \vee q$
+			\end{itemize}
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Questão 025}
+		\begin{block}{[Q025]}
+			Se \begin{center}
+				$(p \vee q) \rightarrow r \Rightarrow r$
+			\end{center} e 
+		\begin{center}
+			$r \Rightarrow (r \leftrightarrow p) \wedge p$,
+		\end{center} pode-se concluir que... 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $(p \vee q) \rightarrow r \Rightarrow (r \leftrightarrow p) \wedge p$
+			\item $r \Rightarrow (p \vee q) \rightarrow r$
+			\item $(p \vee q) \rightarrow r \Rightarrow p$
+			\item $(r \leftrightarrow p) \wedge p \Rightarrow r$
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Tautologias e Implicação Lógica}
+		\begin{block}{Teorema}
+			\center
+			$P(p,q,r, \ldots)$ $\Rightarrow$ $Q(p,q,r,\ldots)$ \\se, e somente se a condicional \\$P(p,q,r, \ldots)$ $\rightarrow$ $Q(p,q,r,\ldots)$ \\for uma tautologia.			
+		\end{block} \pause
+		\begin{block}{Corolário}
+			\center
+			Se $P(p,q,r, \ldots)$ $\Rightarrow$ $Q(p,q,r,\ldots)$ então\\
+			$P(P_0,Q_0,R_0, \ldots)$ $\Rightarrow$ $Q(P_0,Q_0,R_0,\ldots)$\\
+			quaisquer que sejam $P_0,Q_0,R_0, \ldots$.
+		\end{block} \pause
+		\begin{exampleblock}{Nota...}
+			Os símbolos $\rightarrow$ e $\Rightarrow$ são distintos. O primeiro é uma operação lógica, enquanto o segundo é uma relação lógica.
+		\end{exampleblock}
+	\end{frame}
+	
+	\begin{frame}{Questão 026}
+		\begin{block}{[Q026]}
+			A partir da tabela-verdade abaixo
+			\begin{table}
+				\center			
+			\begin{tabular}{|c|c||c|c|c|}
+				\hline
+				$p$ & $q$ & $p \leftrightarrow q$ & $(p \leftrightarrow q) \wedge p$ & $(p \leftrightarrow q) \wedge p \rightarrow q$  \\
+				\hline
+				V & V & V & V & V \\
+				V & F & F & F & V \\
+				F & V & F & F & V \\
+				F & F & V & F & V \\
+				\hline
+			\end{tabular}
+			\end{table}
+		\vspace*{0.2cm}
+		é correto {\bf afirmar} que...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $p \leftrightarrow q \Rightarrow p$
+			\item $p \Rightarrow p \leftrightarrow q$
+			\item $(p \leftrightarrow q) \Rightarrow p \rightarrow q$
+			\item $(p \leftrightarrow q) \wedge p \Rightarrow q$
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Questão 027}
+		\begin{block}{[Q027]}
+			Seja a implicação $(p \rightarrow q \rightarrow r) \wedge (r \vee p) \Rightarrow r \vee p$. \\Pode-se dizer que ela é...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Verdadeira.
+			\item Falsa.
+		\end{enumerate}
+	\end{frame}
+	
+	
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}

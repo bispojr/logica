@@ -1,0 +1,205 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+\usepackage{colortbl}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\usepackage{pifont}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Equivalência Lógica} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{07 de maio de 2019} }
+
+\logo{\includegraphics[width=1cm]{images/ufjJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Equivalência Lógica}
+	
+	\begin{frame}{Questão 026}
+	\begin{block}{[Q026]}
+		A partir da tabela-verdade abaixo
+		\begin{table}
+			\center			
+			\begin{tabular}{|c|c||c|c|c|}
+				\hline
+				$p$ & $q$ & $p \leftrightarrow q$ & $(p \leftrightarrow q) \wedge p$ & $(p \leftrightarrow q) \wedge p \rightarrow q$  \\
+				\hline
+				V & V & V & V & V \\
+				V & F & F & F & V \\
+				F & V & F & F & V \\
+				F & F & V & F & V \\
+				\hline
+			\end{tabular}
+		\end{table}
+		\vspace*{0.2cm}
+		é correto {\bf afirmar} que...
+	\end{block}
+	\begin{enumerate}[label=(\Alph*)]
+		\item $p \leftrightarrow q \Rightarrow p$
+		\item $p \Rightarrow p \leftrightarrow q$
+		\item $(p \leftrightarrow q) \Rightarrow p \rightarrow q$
+		\item $(p \leftrightarrow q) \wedge p \Rightarrow q$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Questão 027}
+\begin{block}{[Q027]}
+Seja a implicação $(p \rightarrow q \rightarrow r) \wedge (r \vee p) \Rightarrow r \vee p$. \\Pode-se dizer que ela é...
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+\item Verdadeira.
+\item Falsa.
+\end{enumerate}
+\end{frame}
+	
+	\begin{frame}{Equivalência Lógica}
+		\begin{block}{Definição}
+			Diz-se que uma proposição $P(p,q,r, \ldots)$ logicamente equivalente ou apenas {\bf equivalente} a uma proposição $Q(p,q,r, \ldots)$, se as tabelas-verdade destas duas proposições forem idênticas.
+		\end{block} \pause
+		\begin{block}{Notação}
+			$P(p, q, r, \ldots) \Leftrightarrow Q(p,q,r, \ldots)$
+		\end{block} \pause
+		\begin{block}{Exemplos}
+			\begin{itemize}
+				\item $\sim \sim p \Leftrightarrow p$ \ \ e \ \ $p \rightarrow q \Leftrightarrow$ $\sim p \vee q$
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Questão 028}
+		\begin{block}{[Q028]}
+			Qual das alternativas abaixo é {\bf falsa}? 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item $p \wedge \sim q$ $\Leftrightarrow$ $p$ $\wedge \sim q$
+			\item $p \wedge (p \vee q)$ $\Leftrightarrow$ $p$
+			\item $p \rightarrow q$ $\Leftrightarrow$ $q \rightarrow p$
+			\item $p \vee q$ $\Leftrightarrow$ $q \vee p$
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Propriedades}
+		\begin{block}{Reflexiva}
+			$P(p, q, r, \ldots) \Leftrightarrow P(p,q,r, \ldots)$
+		\end{block} \pause
+		\begin{block}{Simétrica}
+			\begin{itemize}
+				\item  {\bf Se} $P(p, q, r, \ldots) \Leftrightarrow Q(p,q,r, \ldots)$  {\bf então}
+				\hrule \pause
+				\item $Q(p, q, r, \ldots) \Leftrightarrow P(p,q,r, \ldots)$
+			\end{itemize}
+		\end{block} \pause
+		\begin{block}{Transitiva}
+			\begin{itemize}
+				\item  {\bf Se} $P(p, q, r, \ldots) \Leftrightarrow Q(p,q,r, \ldots)$ \pause
+				\item  {\bf e} $Q(p, q, r, \ldots) \Leftrightarrow R(p,q,r, \ldots)$ {\bf então}
+				\hrule \pause
+				\item $P(p, q, r, \ldots) \Leftrightarrow R(p,q,r, \ldots)$
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Tautologias e Equivalência Lógica}
+		\begin{block}{Teorema}
+			\center
+			$P(p,q,r, \ldots)$ $\Leftrightarrow$ $Q(p,q,r,\ldots)$ \\se, e somente se a bicondicional \\$P(p,q,r, \ldots)$ $\leftrightarrow$ $Q(p,q,r,\ldots)$ \\for uma tautologia.			
+		\end{block} \pause
+		\begin{block}{Corolário}
+			\center
+			Se $P(p,q,r, \ldots)$ $\Leftrightarrow$ $Q(p,q,r,\ldots)$ então\\
+			$P(P_0,Q_0,R_0, \ldots)$ $\Leftrightarrow$ $Q(P_0,Q_0,R_0,\ldots)$\\
+			quaisquer que sejam $P_0,Q_0,R_0, \ldots$.
+		\end{block} \pause
+		\begin{exampleblock}{Nota...}
+			Os símbolos $\leftrightarrow$ e $\Leftrightarrow$ são distintos. O primeiro é uma operação lógica, enquanto o segundo é uma relação lógica.
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Questão 029}
+	\begin{block}{[Q029]}
+		Se \begin{center}
+			$(p \vee q) \rightarrow r \Leftrightarrow r$
+		\end{center} e 
+		\begin{center}
+			$r \Leftrightarrow (s \leftrightarrow t) \wedge v$,
+		\end{center} {\bf não} se pode afirmar que... 
+	\end{block}
+	\begin{enumerate}[label=(\Alph*)]
+		\item $(p \vee q) \rightarrow r \Leftrightarrow (s \leftrightarrow t) \wedge v$
+		\item $(p \vee q) \Leftrightarrow (s \leftrightarrow t)$
+		\item $(p \vee q) \rightarrow r \Leftrightarrow (p \vee q) \rightarrow r$
+		\item $(s \leftrightarrow t) \wedge v \Leftrightarrow r$
+	\end{enumerate}
+\end{frame}
+	
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}

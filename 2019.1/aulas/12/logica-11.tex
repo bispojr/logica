@@ -1,0 +1,208 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+\usepackage{colortbl}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\usepackage{pifont}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Equivalência Lógica (Parte 2)} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{08 de maio de 2019} }
+
+\logo{\includegraphics[width=1cm]{images/ufjJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Equivalência Lógica}
+	
+	\begin{frame}{Proposições associadas a uma Condicional}
+		\begin{block}{Proposição Recíproca de $p \rightarrow q$}
+			\begin{center}
+				$q \rightarrow p$
+			\end{center}
+		\end{block} \pause
+		\begin{block}{Proposição Contrária de $p \rightarrow q$}
+			\begin{center}
+				$\sim p \rightarrow \sim q$
+			\end{center}
+		\end{block} \pause
+		\begin{block}{Proposição Contrapositiva de $p \rightarrow q$}
+			\begin{center}
+				$\sim q \rightarrow \sim p$
+			\end{center}
+		\end{block} \pause
+		\begin{exampleblock}{Exemplos em relação a $r \rightarrow s \wedge t$}
+			\begin{itemize}[label=-]
+				\item A contrapositiva da contrapositiva.
+				\item A contrapositiva da recíproca.
+				\item A contrapositiva da contrária.
+			\end{itemize}
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Questão 030}
+		\begin{block}{[Q030]}
+			Dada uma proposição $p$ qualquer, \\qual das declarações abaixo é {\bf falsa}? 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item A contrapositiva da contrapositiva de $p$ é $p$.
+			\item A contrária da contrária de $p$ é $p$.
+			\item Se $V(p) = F$, então \\o valor lógico da recíproca de $p$ é verdadeiro.
+			\item Se $V(p) = F$, então \\o valor lógico da contrapositiva de $p$ é verdadeiro.
+		\end{enumerate}
+	\end{frame}
+
+	
+
+\begin{frame}{Negação Conjunta de Duas Proposições}
+	\begin{block}{Definição}
+		Chama-se de {\bf negação conjunta} de duas proposições $p$ e $q$ a proposição ``não p e não q''.
+	\end{block}
+	\begin{block}{Notação}
+		$p \downarrow q$ $\Leftrightarrow$ $\sim p$ $\wedge \sim q$
+	\end{block}
+	\begin{block}{Semântica}
+		\begin{center}
+			\begin{tabular}{|cc|c|}
+				\hline
+				$p$	&	$q$	&	$p \downarrow q$	\\
+				\hline
+				V	&	V	&	F	\\
+				V	&	F	&	F	\\
+				F	&	V	&	F	\\
+				F	&	F	&	V	\\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Questão 031}
+\begin{block}{[Q031]}
+	$p \downarrow p$ é equivalente a...
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item $\sim p$
+	\item $p \vee p$
+	\item $p \wedge p$
+	\item $p \rightarrow p$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Negação Disjunta de Duas Proposições}
+\begin{block}{Definição}
+	Chama-se de {\bf negação disjunta} de duas proposições $p$ e $q$ a proposição ``não p ou não q''.
+\end{block}
+\begin{block}{Notação}
+	$p \uparrow q$ $\Leftrightarrow$ $\sim p$ $\vee \sim q$
+\end{block}
+\begin{block}{Semântica}
+	\begin{center}
+		\begin{tabular}{|cc|c|}
+			\hline
+			$p$	&	$q$	&	$p \uparrow q$	\\
+			\hline
+			V	&	V	&	F	\\
+			V	&	F	&	V	\\
+			F	&	V	&	V	\\
+			F	&	F	&	V	\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{Questão 032}
+\begin{block}{[Q032]}
+	$\sim (p \uparrow p)$ é equivalente a...
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item $\sim p$
+	\item $p$ $\vee \sim p$
+	\item $p \wedge p$
+	\item $p \rightarrow p$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Questão 033}
+\begin{block}{[Q033]}
+	Quando se afirma, em relação a $p \rightarrow q$, que \\``a recíproca também é verdadeira'', está se afirmando que...
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item $p$ e $q$ são verdadeiros.
+	\item $p \Leftrightarrow q$
+	\item $p \vee q$ é verdadeiro.
+	\item $p \wedge q$ é falso.
+\end{enumerate}
+\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
