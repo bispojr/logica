@@ -1,0 +1,266 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{multicol}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+
+\author{\\Universidade Federal de Jataí (UFJ)\\Bacharelado em Ciência da Computação \\Lógica para Ciência da Computação \\Esdras Lins Bispo Jr.}
+
+\date{05 de junho de 2019}
+
+\title{\sc \huge Mini-Teste 3}
+
+\begin{document}
+
+\maketitle
+
+{\bf ORIENTAÇÕES PARA A RESOLUÇÃO}
+
+\small
+ 
+\begin{itemize}
+	\item A avaliação é individual, sem consulta;
+	\item A pontuação máxima desta avaliação é 10,0 (dez) pontos, sendo uma das 06 (seis) componentes que formarão a média final da disciplina: quatro mini-testes (MT), uma prova final (PF), exercícios em formato de {\it Quizzes} (QZ) e questões conceituais (QC) aplicadas em sala de aula pelo método de Instrução pelos Colegas;
+	\item A média final ($MF$) será calculada assim como se segue
+	\begin{eqnarray}
+		MF & = & MIN(10, S) \nonumber \\
+		S & = & [(\sum_{i=1}^{4} max(MT_i, SMT_i ) + PF].0,2  + QC + QZ\nonumber
+	\end{eqnarray}
+	em que 
+	\begin{itemize}
+		\item $S$ é o somatório da pontuação de todas as avaliações, e
+		\item $SMT_i$ é a substitutiva do mini-teste $i$.
+	\end{itemize}
+	\item O conteúdo exigido desta avaliação compreende o seguinte ponto apresentado no Plano de Ensino da disciplina: (3) Demonstrações.
+\end{itemize}
+
+\begin{center}
+	\fbox{\large Nome: \hspace{10cm}}
+\end{center}
+
+\newpage
+
+\begin{enumerate}
+	
+	\section*{Terceiro Teste}
+	
+	\item (5,0 pt) {\bf [Alencar 9.3]} Indicar a {\bf Regra de Inferência} que justifica a {\bf validade} dos seguintes argumentos:
+	\begin{enumerate}
+		\item $p \rightarrow q$ \ $\vdash$ \ $(p \rightarrow q)$ $\vee \sim r$
+		\item $p \rightarrow q$, $q \rightarrow \sim r$ \ $\vdash$ \ $p \rightarrow \sim r$
+		\item $p \rightarrow q \vee r$ \ $\vdash$ \ $p \rightarrow p \wedge (q \vee r)$
+		\item $3 <5$ \ $\vdash$ \ $3<5$ \ $\vee$ \ $3<2$
+		\item $x < 0$ \ $\vee$ \ $x=1$, $x \not=1$ \ $\vdash$ \ $x <0$
+	\end{enumerate}
+	
+	\item (5,0 pt) Verificar que são {\bf válidos} os seguintes argumentos, por meio de {\bf regras de inferência}.
+	\begin{enumerate}
+		\item (2,0 pt) {\bf [Alencar 11.8(c)]}
+		\begin{center}
+			$p \wedge q$, $p \rightarrow r$, $q \rightarrow s$ \ $\vdash$ \ $r \wedge s$
+		\end{center}
+		
+		
+		\item (3,0 pt) {\bf [Alencar 11.15(d)]} 
+		\begin{center}
+			$p \vee q$, $q \rightarrow r$, $p \rightarrow s$, $\sim s$ 
+			\ $\vdash$ \ $r \wedge (p \vee q)$
+		\end{center}
+		
+	\end{enumerate}
+
+\end{enumerate}
+
+\newpage
+
+\section*{Regras de Inferência}
+
+\begin{itemize}
+	\item Regra da Adição (AD) \\
+	(i) $p$ $\vdash$ $p\vee q$ \hspace*{0.5cm} (ii) $p$ $\vdash$ $q \vee p$
+	\item Regra da Simplificação (SIMP) \\
+	(i) $p \wedge q$ $\vdash$ $p$ \hspace*{0.5cm} (ii) $p \wedge q$ $\vdash$ $q$
+	\item Regra da Conjunção (CONJ) \\
+	(i) $p$, $q$ $\vdash$ $p \wedge q$ \hspace*{0.5cm} (ii) $p$, $q$ $\vdash$ $q \wedge p$
+	\item Regra da Absorção (ABS) \\
+	$p \rightarrow q$ $\vdash$ $p \rightarrow (p \wedge q)$
+	\item Regra {\it Modus Ponens} (MP) \\
+	$p \rightarrow q$, $p$ $\vdash$ $q$
+	\item Regra {\it Modus Tollens} (MT) \\
+	$p \rightarrow q$, $\sim q$ $\vdash$ $\sim p$
+	\item Regra do Silogismo Disjuntivo (SD) \\
+	(i) $p \vee q$, $\sim p$ $\vdash$ $q$ \hspace*{0.5cm} (ii) $p \vee q$, $\sim q$ $\vdash$ $p$
+	\item Regra do Silogismo Hipotético (SH) \\
+		$p \rightarrow q$, $q \rightarrow r$ $\vdash$ $p \rightarrow r$
+	\item Regra do Dilema Construtivo (DC) \\
+		$p \rightarrow q$, $r \rightarrow s$, $p \vee r$ $\vdash$ $q \vee s$
+	\item Regra do Dilema Destrutivo (DD) \\
+		$p \rightarrow q$, $r \rightarrow s$, $\sim q$ $\vee \sim s$ $\vdash$ $\sim p$ $\vee \sim r$
+\end{itemize}
+
+%\begin{block}{Regra da Conjunção (CONJ)}
+%\begin{columns}
+%	\column{.5\textwidth} 
+%	\begin{itemize}
+%		\item $p$
+%		\item $q$ \\
+%		\rule{3cm}{0.5pt} 
+%		\item $p \wedge q$
+%	\end{itemize}
+%	\column{.5\textwidth} 
+%	\begin{itemize}
+%		\item $p$
+%		\item $q$ \\
+%		\rule{3cm}{0.5pt} 
+%		\item $q \wedge p$
+%	\end{itemize}
+%\end{columns}
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{Regras de Inferência}
+%\begin{block}{Regra da Absorção (ABS)}
+%\begin{columns}
+%\column{.5\textwidth} 
+%\begin{itemize}
+%	\item $p \rightarrow q$ \\
+%	\rule{3cm}{0.5pt} 
+%	\item $p \rightarrow (p \wedge q)$
+%\end{itemize}
+%\column{.5\textwidth} 
+%\end{columns}
+%\end{block} \pause
+%\begin{block}{Regra {\it Modus Ponens} (MP)}
+%\begin{columns}
+%\column{.5\textwidth} 
+%\begin{itemize}
+%	\item $p \rightarrow q$
+%	\item $p$ \\
+%	\rule{3cm}{0.5pt} 
+%	\item $q$
+%\end{itemize}
+%\column{.5\textwidth} 
+%\end{columns}
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{Questão 038}
+%\begin{block}{[Q038]}
+%Dado o seguinte argumento válido
+%\begin{center}
+%$p \rightarrow (q \rightarrow r)$, $p$ $\vdash$ $q \rightarrow r$
+%\end{center}
+%
+%Qual das regras de inferência abaixo melhor justifica a sua validade?
+%\end{block}
+%\begin{enumerate}[label=(\Alph*)]
+%\item Adição (AD)
+%\item Conjunção (CONJ)
+%\item Absorção (ABS)
+%\item {\it Modus Ponens} (MP)
+%\end{enumerate}
+%\end{frame}
+%
+%\begin{frame}{Regras de Inferência}
+%\begin{block}{Regra {\it Modus Tollens} (MT)}
+%\begin{columns}
+%\column{.5\textwidth} 
+%\begin{itemize}
+%\item $p \rightarrow q$
+%\item $\sim q$ \\
+%\rule{3cm}{0.5pt} 
+%\item $\sim p$
+%\end{itemize}
+%\column{.5\textwidth} 
+%\end{columns}
+%\end{block} \pause
+%\begin{block}{Regra do Silogismo Disjuntivo (SD)}
+%\begin{columns}
+%\column{.5\textwidth} 
+%\begin{itemize}
+%\item $p \vee q$
+%\item $\sim p$ \\
+%\rule{3cm}{0.5pt} 
+%\item $q$
+%\end{itemize}
+%\column{.5\textwidth} 
+%\begin{itemize}
+%\item $p \vee q$
+%\item $\sim q$ \\
+%\rule{3cm}{0.5pt} 
+%\item $p$
+%\end{itemize}
+%\end{columns}
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{Questão 039}
+%\begin{block}{[Q039]}
+%Dado o seguinte argumento válido
+%\begin{center}
+%$(p \wedge q) \vee (\sim p \wedge r)$, $\sim(\sim p \wedge r)$ $\vdash$ $p \wedge q$
+%\end{center}
+%
+%Qual das regras de inferência abaixo melhor justifica a sua validade?
+%\end{block}
+%\begin{enumerate}[label=(\Alph*)]
+%\item {\it Modus Tollens} (MT)
+%\item Silogismo Disjuntivo (SD)
+%\item Simplificação (SIMP)
+%\item {\it Modus Ponens} (MP)	
+%\end{enumerate}
+%\end{frame}
+%
+%\begin{frame}{Regras de Inferência}
+%\begin{block}{Regra do Silogismo Hipotético (SH)}
+%\begin{columns}
+%\column{.5\textwidth} 
+%\begin{itemize}
+%\item $p \rightarrow q$
+%\item $q \rightarrow r$ \\
+%\rule{3cm}{0.5pt} 
+%\item $p \rightarrow r$
+%\end{itemize}
+%\column{.5\textwidth} 
+%\end{columns}
+%\end{block} \pause
+%\begin{block}{Regra do Dilema Construtivo (DC)}
+%\begin{columns}
+%\column{.5\textwidth} 
+%\begin{itemize}
+%\item $p \rightarrow q$
+%\item $r \rightarrow s$
+%\item $p \vee r$\\
+%\rule{3cm}{0.5pt} 
+%\item $q \vee s$
+%\end{itemize}
+%\column{.5\textwidth} 
+%\end{columns}
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{Regras de Inferência}
+%\begin{block}{Regra do Dilema Destrutivo (DD)}
+%\begin{columns}
+%\column{.5\textwidth} 
+%\begin{itemize}
+%\item $p \rightarrow q$
+%\item $r \rightarrow s$
+%\item $\sim q \vee \sim s$\\
+%\rule{3cm}{0.5pt} 
+%\item $\sim p \vee \sim r$
+%\end{itemize}
+%\column{.5\textwidth} 
+%\end{columns}
+%\end{block}
+%\end{frame}
+
+\end{document}
