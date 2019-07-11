@@ -1,0 +1,250 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{multicol}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+
+\author{\\Universidade Federal de Jataí (UFJ)\\Bacharelado em Ciência da Computação \\Lógica para Ciência da Computação \\Esdras Lins Bispo Jr.}
+
+\date{09 de julho de 2019}
+
+\title{\sc \huge Prova (Parte 2)}
+
+\begin{document}
+
+\maketitle
+
+{\bf ORIENTAÇÕES PARA A RESOLUÇÃO}
+
+\small
+ 
+\begin{itemize}
+	\item A avaliação é individual, sem consulta;
+	\item A pontuação máxima desta avaliação é 10,0 (dez) pontos, sendo uma das 06 (seis) componentes que formarão a média final da disciplina: quatro mini-testes (MT), uma prova final (PF), exercícios em formato de {\it Quizzes} (QZ) e questões conceituais (QC) aplicadas em sala de aula pelo método de Instrução pelos Colegas;
+	\item A média final ($MF$) será calculada assim como se segue
+	\begin{eqnarray}
+		MF & = & MIN(10, S) \nonumber \\
+		S & = & [(\sum_{i=1}^{4} max(MT_i, SMT_i ) + PF].0,2  + QC + QZ\nonumber
+	\end{eqnarray}
+	em que 
+	\begin{itemize}
+		\item $S$ é o somatório da pontuação de todas as avaliações, e
+		\item $SMT_i$ é a substitutiva do mini-teste $i$.
+	\end{itemize}
+	\item O conteúdo exigido desta avaliação compreende o seguinte ponto apresentado no Plano de Ensino da disciplina: (3) Demonstrações.
+\end{itemize}
+
+\begin{center}
+	\fbox{\large Nome: \hspace{10cm}}
+\end{center}
+
+\newpage
+
+\begin{enumerate}
+	
+	\section*{Terceiro Teste}
+	
+	\item (5,0 pt) {\bf [Alencar 9.3 Adaptado]} Indicar a {\bf Regra de Inferência} que justifica a {\bf validade} dos seguintes argumentos:
+	\begin{enumerate}
+		\item $p \rightarrow q$, $r \vee q$ \ $\vdash$ \ $(p \rightarrow q) \wedge (r \vee q)$ \hspace*{0.5cm} {\color{blue} Regra da Conjunção}
+		\item $q \rightarrow \sim r$, $\sim \sim r$ \ $\vdash$ \ $\sim q$ \hspace*{0.5cm} {\color{blue} Regra {\it Modus Tollens}}
+		\item $(u \leftrightarrow x) \rightarrow z$ \ $\vdash$ \ $(u \leftrightarrow x) \rightarrow (u \leftrightarrow x) \wedge z$ \hspace*{0.5cm} {\color{blue} Regra da Absorção}
+		\item $3 < 5$ \ $\rightarrow$ \ $4^2 \not= 16$, $\sqrt{3} \geq 1 \rightarrow \pi = 22/7$, $4^2 = 16 \vee \pi \not= 22/7$ \ \\$\vdash$ \ $3 \geq 5$ \ $\vee$ \ $\sqrt{3} < 1$ \hspace*{0.5cm} {\color{blue} Regra do Dilema Destrutivo}
+		\item $z < 8$ \ $\vee$ \ $t=5$, $t \not=5$ \ $\vdash$ \ $z <8$ \hspace*{0.5cm} {\color{blue} Regra do Silogismo Disjuntivo}
+	\end{enumerate}
+	
+	\item (5,0 pt) Verificar que são {\bf válidos} os seguintes argumentos, por meio de {\bf regras de inferência}.
+	\begin{enumerate}
+		\item (2,0 pt) {\bf [Alencar 11.8 (e)]}
+		\begin{center}
+			$p \rightarrow q$, $\sim q$, $\sim p \rightarrow r$ \ $\vdash$ \ $r$
+		\end{center}
+		{\color{blue}
+			\begin{itemize}
+				\item[(1)] $p \rightarrow q$ 
+				\item[(2)] $\sim q$
+				\item[(3)] $\sim p \rightarrow r$ \\
+				\rule{3cm}{0.5pt}
+				\item[(4)] $\sim p$ \hspace*{0.7cm} MT (1), (2)
+				\item[(5)] $r$ \hspace*{1.1cm} MP (3), (4)
+			\end{itemize}
+		}
+		\vspace*{0.3cm}
+		
+		\item (3,0 pt) {\bf [Alencar 11.15 (e)]} 
+		\begin{center}
+			$\sim p$ $\vee \sim q$, $\sim q \rightarrow \sim r$, $\sim p \rightarrow t$, $\sim t$ 
+			\ $\vdash$ \ $\sim r$ $\wedge \sim t$
+		\end{center}
+		{\color{blue}
+			\begin{itemize}
+				\item[(1)] $\sim p$ $\vee \sim q$ 
+				\item[(2)] $\sim q \rightarrow \sim r$
+				\item[(3)] $\sim p \rightarrow t$ 
+				\item[(4)] $\sim t$ \\
+				\rule{3cm}{0.5pt}
+				\item[(5)] $\sim \sim p$ \hspace*{0.7cm} MT (3), (4)
+				\item[(6)] $\sim q$ \hspace*{1.1cm} SD (1), (5)
+				\item[(7)] $\sim r$ \hspace*{1.1cm} MP (2), (6)
+				\item[(8)] $\sim r$ $\wedge \sim t$ \hspace*{0.1cm} CONJ (4), (7)
+			\end{itemize}
+		}
+		\vspace*{0.3cm}
+		
+	\end{enumerate}
+	
+	\section*{Quarto Teste}
+	
+	\item (5,0 pt) Usar a Regra DC (Demonstração Condicional) para mostrar que são {\bf válidos} os seguintes argumentos: por meio de {\bf regras de inferência} e {\bf regras auxiliares}.
+	\begin{enumerate}
+		\item (2,0 pt) {\bf [Alencar 13.3 (c)]} 
+		\begin{center}
+			$p \wedge q \rightarrow \sim r$ $\vee \sim s$, $r \wedge s$ $\vdash$ $p \rightarrow \sim q$
+		\end{center}
+		{\color{blue}
+			\begin{itemize}
+				\item[(1)] $p \wedge q \rightarrow \sim r$ $\vee \sim s$ \hspace*{0.5cm} P
+				\item[(2)] $r \wedge s$ \hspace*{2.7cm} P
+				\item[(3)] $p$ \hspace*{3.3cm} PA\\
+				\rule{3cm}{0.5pt}
+				\item[(4)] $r$ \hspace*{2.5cm} SIMP (2)
+				\item[(5)] $s$ \hspace*{2.5cm} SIMP (2)
+				\item[(6)] $\sim \sim r$ \hspace*{1.9cm} DN (4)
+				\item[(7)] $\sim \sim s$ \hspace*{1.9cm} DN (5)
+				\item[(8)] $\sim \sim r$ $\wedge \sim \sim s$  \hspace*{0.5cm} CONJ (6), (7)
+				\item[(9)] $\sim (\sim r$ $\vee \sim s)$
+				 \hspace*{0.5cm} DM (8)
+				\item[(10)] $\sim(p \wedge q)$ \hspace*{1.3cm} MT (1), (9)
+				\item[(11)] $\sim p$ $\vee \sim q$ \hspace*{1.0cm} DM (10)
+				\item[(12)] $\sim \sim p$ \hspace*{1.8cm} DN (3)
+				\item[(13)] $\sim q$ \hspace*{2.1cm} SD (11), (12)
+			\end{itemize}
+		}
+		\vspace*{0.3cm}
+		
+		\item (3,0 pt) {\bf [Alencar 13.3 (e)]} 
+		\begin{center}
+			$(p \rightarrow q) \vee r$, $s \vee t \rightarrow \sim r$, $s \vee (t \wedge u)$ $\vdash$ $p \rightarrow q$
+		\end{center}
+		{\color{blue}
+			\begin{itemize}
+				\item[(1)] $(p \rightarrow q) \vee r$ \hspace*{0.5cm} P
+				\item[(2)] $s \vee t \rightarrow \sim r$ \hspace*{0.6cm} P
+				\item[(3)] $s \vee (t \wedge u)$ \hspace*{0.7cm} P
+				\item[(4)] $p $ \hspace*{2.2cm} PA\\
+				\rule{3cm}{0.5pt}
+				\item[(5)] $(s \vee t) \wedge (s \vee u)$ \hspace*{0.5cm} DIST (3)
+				\item[(6)] $s \vee t$ \hspace*{2.3cm} SIMP (5)
+				\item[(7)] $\sim r$ \hspace*{2.5cm} MP (2), (6)
+				\item[(8)] $p \rightarrow q$ \hspace*{2.1cm} SD (1), (7)
+				\item[(9)] $q$  \hspace*{2.9cm} MP (4), (8)
+			\end{itemize}
+		}
+		\vspace*{0.3cm}
+	\end{enumerate}
+	
+	\item (5,0 pt) Usar a Regra DI (Demonstração Indireta) para mostrar que são {\bf válidos} os seguintes argumentos: por meio de {\bf regras de inferência} e {\bf regras auxiliares}.
+	\begin{enumerate}
+		\item (2,0 pt) {\bf [Alencar 13.6 (a)]} 
+		\begin{center}
+			$(p \rightarrow q) \vee (r \wedge s)$, $\sim q$ $\vdash$ $p \rightarrow s$
+		\end{center}
+		{\color{blue}
+			\begin{itemize}
+				\item[(1)] $(p \rightarrow q) \vee (r \wedge s)$ \hspace*{0.8cm} P
+				\item[(2)] $\sim q$ \hspace*{3.0cm} P
+				\item[(3)] $\sim (p \rightarrow s)$ \hspace*{1.9cm} PA\\
+				\rule{3cm}{0.5pt}
+				\item[(4)] $\sim(\sim p \vee s)$ \hspace*{1.3cm} COND (3)
+				\item[(5)] $\sim \sim p$ $\wedge \sim s$ \hspace*{1.3cm} DM (5)
+				\item[(6)] $\sim s$ \hspace*{2.6cm} SIMP (6)
+				\item[(7)] $((p \rightarrow q) \vee r) \wedge ((p \rightarrow q) \vee s)$ \hspace*{0.5cm} DIST (1)
+				\item[(8)] $(p \rightarrow q) \vee s$ \hspace*{1.3cm} SIMP (7)
+				\item[(9)] $p \rightarrow q$ \hspace*{2.3cm} SD (6), (8)
+				\item[(10)] $\sim \sim p$ \hspace*{2.3cm} SIMP (7)
+				\item[(11)] $p$ \hspace*{2.8cm} DN (10)
+				\item[(12)] $q$ \hspace*{2.8cm} MP (9), (11)
+				\item[(13)] $q$ $\wedge \sim q$ \hspace*{1.6cm} CONJ (2), (12) {\bf [Contradição]}
+			\end{itemize}
+		}
+		\vspace*{0.3cm}
+		
+		\newpage
+		
+		\item (3,0 pt) {\bf [Alencar 13.6 (c)]} 
+		\begin{center}
+			$\sim p \rightarrow \sim q \vee r$, $s \vee (r \rightarrow t)$, $p \rightarrow s$, $\sim s$ $\vdash$ $q \rightarrow t$
+		\end{center}
+		{\color{blue}
+			\begin{itemize}
+				\item[(1)] $\sim p \rightarrow \sim q \vee r$ \hspace*{0.8cm} P
+				\item[(2)] $s \vee (r \rightarrow t)$ \hspace*{1.3cm} P
+				\item[(3)] $p \rightarrow s$ \hspace*{2.2cm} P
+				\item[(4)] $\sim s$ \hspace*{2.6cm} P
+				\item[(5)] $\sim (q \rightarrow t)$ \hspace*{1.5cm} PA\\
+				\rule{3cm}{0.5pt}
+				\item[(6)] $\sim p \rightarrow (q \rightarrow r)$ \hspace*{0.3cm} COND (1)
+				\item[(7)] $\sim \sim p$ \hspace*{1.9cm} MT (5), (6)
+				\item[(8)] $p$ \hspace*{2.1cm} DN (7)
+				\item[(9)] $s$ \hspace*{2.1cm} MP (3), (8)
+				\item[(10)] $s$ $\wedge \sim s$ \hspace*{1.0cm} CONJ (4), (9) {\bf [Contradição]}
+			\end{itemize}
+		}
+		\vspace*{0.3cm}
+		
+	\end{enumerate}
+
+\end{enumerate}
+
+\newpage
+
+\section*{Regras de Inferência}
+
+\begin{itemize}
+	\item Regra da Adição (AD) \\
+	(i) $p$ $\vdash$ $p\vee q$ \hspace*{0.5cm} (ii) $p$ $\vdash$ $q \vee p$
+	\item Regra da Simplificação (SIMP) \\
+	(i) $p \wedge q$ $\vdash$ $p$ \hspace*{0.5cm} (ii) $p \wedge q$ $\vdash$ $q$
+	\item Regra da Conjunção (CONJ) \\
+	(i) $p$, $q$ $\vdash$ $p \wedge q$ \hspace*{0.5cm} (ii) $p$, $q$ $\vdash$ $q \wedge p$
+	\item Regra da Absorção (ABS) \\
+	$p \rightarrow q$ $\vdash$ $p \rightarrow (p \wedge q)$
+	\item Regra {\it Modus Ponens} (MP) \\
+	$p \rightarrow q$, $p$ $\vdash$ $q$
+	\item Regra {\it Modus Tollens} (MT) \\
+	$p \rightarrow q$, $\sim q$ $\vdash$ $\sim p$
+	\item Regra do Silogismo Disjuntivo (SD) \\
+	(i) $p \vee q$, $\sim p$ $\vdash$ $q$ \hspace*{0.5cm} (ii) $p \vee q$, $\sim q$ $\vdash$ $p$
+	\item Regra do Silogismo Hipotético (SH) \\
+	$p \rightarrow q$, $q \rightarrow r$ $\vdash$ $p \rightarrow r$
+	\item Regra do Dilema Construtivo (DC) \\
+	$p \rightarrow q$, $r \rightarrow s$, $p \vee r$ $\vdash$ $q \vee s$
+	\item Regra do Dilema Destrutivo (DD) \\
+	$p \rightarrow q$, $r \rightarrow s$, $\sim q$ $\vee \sim s$ $\vdash$ $\sim p$ $\vee \sim r$
+\end{itemize}
+
+\section*{Regras Auxiliares}
+
+\begin{itemize}
+	\item Regra da Dupla Negação (DN) \\
+	(i) $p$ $\vdash$ $\sim \sim p$ \hspace*{0.5cm} (ii)  $\sim \sim p$ $\vdash$ $p$
+	\item Regra do Bicondicional (BIC) \\
+	(i) $p \leftrightarrow q$ $\vdash$ $(p \rightarrow q) \wedge (q \rightarrow p)$ \hspace*{0.5cm} (ii)  $(p \rightarrow q) \wedge (q \rightarrow p)$ $\vdash$ $p \leftrightarrow q$
+	\item Regra de De Morgan (DM) \\
+	(i) $\sim (p \vee q)$ $\vdash$ $\sim p$ $\wedge \sim q$ \hspace*{0.5cm} (ii) $\sim p$ $\wedge \sim q$ $\vdash$ $\sim (p \vee q)$ \\
+	(iii) $\sim (p \wedge q)$ $\vdash$ $\sim p$ $\vee \sim q$ \hspace*{0.5cm} (iv) $\sim p$ $\vee \sim q$ $\vdash$ $\sim (p \wedge q)$
+	\item Regra do Condicional (COND) \\
+	(i) $p \rightarrow q$ $\vdash$ $\sim p \vee q$ \hspace*{0.5cm} (ii)  $\sim p \vee q$ $\vdash$ $p \rightarrow q$
+	\item Regra Distributiva (DIST) \\
+	(i) $p \vee (q \wedge r)$ $\vdash$ $(p \vee q) \wedge (p \vee r)$ \hspace*{0.5cm} (ii)  $(p \vee q) \wedge (p \vee r)$ $\vdash$ $p \vee (q \wedge r)$  
+\end{itemize}
+
+\end{document}
