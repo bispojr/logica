@@ -1,0 +1,372 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+\usepackage{colortbl}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Introdução à Lógica Proposicional} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{esdraspiano@gmail.com}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{03 de março de 2020} }
+
+\logo{\includegraphics[width=1cm]{images/ufjJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Instrução pelos Colegas}
+	\subsection{Objetivos da Aula}
+	\begin{frame}{Objetivos da Aula}
+		\begin{itemize}
+			\item Compreender os conceitos de
+			\begin{itemize}[label=$\bullet$]
+				\item Proposição (Simples e Composta);
+				\item Conectivos;
+				\item Valor Lógico;
+				\item Tabela-Verdade.
+			\end{itemize}
+		\item Compreender os Princípios da 
+			\begin{itemize}[label=$\bullet$]
+				\item Não-Contradição; e 
+				\item do Terceiro Excluído;
+			\end{itemize}
+		\item Saber utilizar a notação sobre valor lógico.
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Conceito de Proposição}
+		\begin{block}{Proposição}
+			Todo o conjunto de palavras ou símbolos que exprimem um pensamento de sentido completo.
+		\end{block} \pause
+		\begin{block}{Características das Proposições}
+				\begin{itemize}[label=-] \pause
+					\item Afirmam fatos; e  \pause
+					\item Exprimem juízos.
+				\end{itemize}
+		\end{block} \pause
+		\begin{block}{Exemplos}
+			\begin{itemize}[label=-]
+				\item A Lua é um satélite da Terra.
+				\item Recife é a capital de Pernambuco.
+				\item $\pi > 5$
+				\item sen $\dfrac{\pi}{2} = 1$
+			\end{itemize}
+		\end{block}
+\end{frame}
+
+	\begin{frame}{Questão 001}
+		\begin{block}{[Q001]}
+			Qual das seguintes declarações abaixo \underline{\bf não} é uma proposição?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item A UFJ é uma universidade.
+			\item Bolsonaro é o presidente do Brasil.
+			\item Qual horário o ônibus passará hoje?
+			\item Lula é o presidente do Brasil.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Princípios da Lógica}
+		\begin{block}{Princípio da Não-Contradição}
+			Uma proposição não pode ser verdadeira e falsa ao mesmo tempo.
+		\end{block} \pause
+		\begin{block}{Princípio do Terceiro Excluído}
+			Toda a proposição ou é verdadeira ou é falsa, isto é, verifica-se sempre um destes casos e nunca um terceiro.
+		\end{block} \pause
+		\begin{exampleblock}{Por isso...}
+			A Lógica Matemática é chamada de uma lógica bivalente.
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Princípios da Lógica}
+		\begin{block}{Exemplos}
+			\begin{itemize}[label=-] 
+				\item A Lua é um satélite da Terra. \pause {\color{blue} [Verdadeira]}
+				\item Vasco da Gama descobriu o Brasil. \pause {\color{red} [Falsa]}
+				\item Recife é a capital de Pernambuco. \pause {\color{blue} [Verdadeira]}
+				\item Dante escreveu ``os Lusíadas''. \pause {\color{red} [Falsa]}
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Questão 002}		
+		\begin{block}{[Q002]}
+			``Ou você joga bola, ou você fica comigo! Não pode ser os dois''. Qual o princípio da Lógica \underline{\bf melhor} se encaixa no espírito desta declaração? 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Princípio do Terceiro Excluído
+			\item Princípio da Casa de Pombos
+			\item Princípio da Não Contradição
+			\item Princípio da Não Interferência
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Tipos de Proposições}
+		\begin{block}{Proposições Simples (Atômica)}
+			É aquela que não contém nenhuma outra proposição como parte integrante de si mesma.
+		\end{block} \pause
+		\begin{block}{Representação}
+			Normalmente letras latinas minúsculas $p$, $q$, $r$, ...
+		\end{block} \pause
+		\begin{exampleblock}{Exemplos}
+			\begin{itemize}[label=-]
+				\item $p$: Carlos é careca.
+				\item $q$: Pedro é estudante.
+				\item $r$: O número 25 é quadrado perfeito.
+			\end{itemize}
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Tipos de Proposições}
+		\begin{block}{Proposição Composta (Molecular)}
+			É aquela formada pela combinação de duas ou mais proposições.
+		\end{block} \pause
+		\begin{block}{Representação}
+			Normalmente letras latinas maiúsculas $P$, $Q$, $R$, ...
+		\end{block} \pause
+		\begin{exampleblock}{Exemplos}
+			\begin{itemize}[label=-]
+				\item $P$: Carlos é careca {\bf e} Pedro é estudante.
+				\item $Q$: Carlos é careca {\bf ou} Pedro é estudante.
+				\item $R$: {\bf Se} Carlos é careca, {\bf então} é infeliz.
+			\end{itemize}
+		\end{exampleblock} \pause
+		\begin{block}{Outros nomes...}
+			Fórmula proposicional ou fórmulas.
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Conectivos}
+		\begin{block}{Definição}
+			São palavras que se usam para formar novas proposições a partir de outras.
+		\end{block} \pause
+		\begin{exampleblock}{Exemplos} \pause
+			\begin{itemize}[label=-]
+				\item O número 6 é par {\bf e} o número 8 é cubo perfeito. \pause
+				\item {\bf Não} está chovendo. \pause
+				\item {\bf Se} Jorge é engenheiro, {\bf então} sabe Matemática. \pause
+				\item O triângulo ABC é equilátero {\bf se, e somente se,} é equiângulo.
+			\end{itemize}
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Questão 003}
+	\begin{block}{[Q003]}
+		Qual das seguintes declarações abaixo \underline{\bf não} é uma proposição composta?
+	\end{block}
+	\begin{enumerate}[label=(\Alph*)]
+		\item A UFJ é uma universidade e uma instituição.
+		\item Bolsonaro é o presidente do Brasil até o final do mandato.
+		\item Se a leitura do material é feita, então a aula fica mais legal.
+		\item Lula é o presidente do Brasil ou ele é um presidiário.
+	\end{enumerate}
+\end{frame}
+
+	\begin{frame}{Questão 004}		
+		\begin{block}{[Q004]}
+			As proposições moleculares são formadas por... 
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item valores lógicos e conectivos
+			\item proposições simples e valores lógicos
+			\item proposições simples e conectivos
+			\item letras proposicionais e fórmulas
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Tabela-Verdade}
+		\begin{block}{Princípio}
+			O valor lógico de qualquer proposição composta depende unicamente dos valores lógicos das proposições simples componentes, ficando por eles univocamente determinado.
+		\end{block} \pause
+		\begin{block}{Tabela-Verdade}
+			Dispositivo que apresenta todas as possíveis valorações de uma dada fórmula.
+		\end{block} \pause
+		\begin{exampleblock}{Exemplo}
+			\begin{columns}
+				\column{.4\textwidth}  		
+				\begin{center}
+					\begin{tabular}{|c|}
+						\hline
+						p	\\
+						\hline
+						V	\\
+						F	\\
+						\hline
+					\end{tabular}
+				\end{center}
+				\column{.6 \textwidth}
+					\begin{center}
+						\includegraphics[width=.4\textwidth]{images/tv-1}
+					\end{center}
+			\end{columns}			
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Tabela-Verdade}
+	
+		\begin{exampleblock}{Exemplo}
+			\begin{columns}
+				\column{.4\textwidth}  		
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\cellcolor{black}	&	$p$	&	$q$	\\
+						\hline
+						1	&	V	&	V	\\
+						2	&	V	&	F	\\
+						3 	&	F	&	V	\\
+						4	&	F	&	F	\\
+						\hline
+					\end{tabular}
+				\end{center}
+				\column{.6 \textwidth}
+				\begin{center}
+					\includegraphics[width=.6\textwidth]{images/tv-2}
+				\end{center}
+			\end{columns}			
+		\end{exampleblock}
+	
+	\end{frame}
+
+	\begin{frame}{Tabela-Verdade}
+	
+		\begin{exampleblock}{Exemplo}
+			\begin{columns}
+				\column{.4\textwidth}  		
+				\begin{center}
+					\begin{tabular}{|c|c|c|c|}
+						\hline
+						\cellcolor{black} &	$p$	&	$q$	&	$r$	\\
+						\hline
+						1	&	V	&	V	&	V	\\
+						2	&	V	&	V	&	F	\\
+						3	&	V	&	F	&	V	\\
+						4	&	V	&	F	&	F	\\
+						5	&	F	&	V	&	V	\\
+						6	&	F	&	V	&	F	\\
+						7	&	F	&	F	&	V	\\
+						8	&	F	&	F	&	F	\\
+						\hline
+					\end{tabular}
+				\end{center}
+				\column{.6 \textwidth}
+				\begin{center}
+					\includegraphics[width=.6\textwidth]{images/tv-3}
+				\end{center}
+			\end{columns}			
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Questão 005}		
+		\begin{block}{[Q005]}
+			Quantos valores lógicos diferentes possíveis uma proposição composta formada por 4 proposições simples pode ter?
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item 2
+			\item 8
+			\item 16
+			\item 32
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Valor Lógico}
+		\begin{block}{Notação}
+			O valor lógico de uma proposição simples $p$ indica-se por $V(p)$.
+		\end{block} \pause
+		\begin{block}{Assim...}
+			\begin{itemize}[label=-]
+				\item Se $p$ é verdadeira, então $V(p) = V$; \pause
+				\item Se $p$ é falsa, então $V(p) = F$.
+			\end{itemize}
+		\end{block} \pause
+		\begin{exampleblock}{Exemplos}
+			\begin{itemize}[label=-]
+				\item $p$: O Sol é verde.
+				\item $q$: Um hexágono tem 9 diagonais.
+				\item 2 é raiz da equação $x^2 + 3x -4 = 0$.
+			\end{itemize} \pause
+		
+			\begin{center}
+				$V(p) = F$, \ \ \ $V(q) = V$, e \ \ \ $V(r)= F$.
+			\end{center}
+			
+		\end{exampleblock}
+	\end{frame}
+
+	\begin{frame}{Questão 006}		
+		\begin{block}{[Q006]}
+			Se $V(p) = F$ e $p:$ ``O boné é mais caro do que o chapéu'', então é \underline{\bf impossível} afirmar que...
+		\end{block}
+		\begin{enumerate}[label=(\Alph*)]
+			\item o boné custa o mesmo valor do chapéu.
+			\item o boné custa R$\$$ $35,00$ e o chapéu custa R$\$$ $40,00$.
+			\item o boné custa metade do preço do chapéu.
+			\item o boné custa R$\$$ $15,00$ e o chapéu custa R$\$$ $10,00$.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
