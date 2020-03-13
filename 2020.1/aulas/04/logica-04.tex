@@ -1,0 +1,300 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+%\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+\usepackage{colortbl}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\usepackage{pifont}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+% \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+%   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+%   \setbeamercolor{title}{bg=colortitulo!20!black}
+%   \setbeamercolor{background canvas}{bg=colortitulo}
+%   \setbeamercolor{frametitle}{fg=red}
+
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+
+
+%   \usefonttheme[onlysmall]{structurebold}
+%   \usecolortheme{seahorse}
+%  \usecolortheme[named={YellowOrange}]{structure}
+%   \usecolortheme[named={Blue}]{structure}
+%   \usecolortheme{crane}
+%   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{Operações Lógicas sobre Proposições \\(Parte II)} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{esdraspiano@gmail.com}
+  } 
+ \institute{
+  Lógica para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{10 de março de 2020} }
+
+\logo{\includegraphics[width=1cm]{images/ufjJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Operações Lógicas}
+	\begin{frame}{Operações Lógicas}
+		\begin{block}{Características}
+			Obedecem a regras do cálculo proposicional.
+		\end{block} 
+		\begin{block}{Algumas operações lógicas...}
+			\begin{itemize}[label=-]
+				\item Negação; {\color{blue} \ding{51}}
+				\item Conjunção; {\color{blue} \ding{51}}
+				\item Disjunção; {\color{blue} \ding{51}}
+				\item Disjunção exclusiva;
+				\item Condicional;
+				\item Bicondicional.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\subsection{Disjunção Exclusiva}
+	\begin{frame}{Disjunção Exclusiva}
+		\begin{block}{Definição}
+			Chama-se de {\bf disjunção exclusiva de duas proposições} $p$ e $q$ a proposição representada por ``ou $p$ ou $q$''.
+		\end{block} \pause
+		\begin{block}{Notação}
+			$p$ $\underline{\vee}$ $q$
+		\end{block} \pause
+		\begin{block}{Semântica}
+			\begin{center}
+				\begin{tabular}{|cc|c|}
+					\hline
+					$p$	&	$q$	&	$p$ $\underline{\vee}$ $q$	\\
+					\hline
+					V	&	V	&	F	\\
+					V	&	F	&	V	\\
+					F	&	V	&	V	\\
+					F	&	F	&	F	\\
+					\hline
+				\end{tabular}
+			\end{center}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Disjunção Exclusiva}
+		\begin{block}{Exemplos}
+			\begin{itemize}
+				\item $p$: Rivaldo foi revelado no Santa Cruz. \hspace*{0.9cm} (V)\\
+				$q$: Neymar é melhor do que Cristiano Ronaldo. \hspace*{0.9cm} (F)\\
+				\hrule
+				\item \pause
+				\item $p$ $\underline{\vee}$ $q$: Ou Rivaldo foi revelado no Santa Cruz \\
+				\hspace*{1.1cm} ou Neymar é melhor do que Cristiano Ronaldo.\\ \pause
+				\vspace*{0.3cm}
+				\item $V(p$ $\underline\vee$ $q) = \pause V(p)$ $\underline\vee$ $V(q) = \pause V$ $\underline\vee$ $F = \pause V$
+			\end{itemize}
+		\end{block}
+\end{frame}
+
+\begin{frame}{Questão 013}
+\begin{block}{[Q013]}
+	Sejam $p$ e $q$ duas proposições. Se $V(\sim p$ $\underline{\vee}$ $q) = V$, logo podemos afirmar que
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item $V(p) = F$
+	\item $V(p) = V$
+	\item $p$ e $q$ têm valorações iguais.
+	\item Não é possível afirmar nada sobre a valoração das proposições.
+\end{enumerate}
+\end{frame}
+
+\subsection{Condicional}
+\begin{frame}{Condicional}
+\begin{block}{Definição}
+	Chama-se de {\bf proposição condicional} (ou apenas {\bf condicional}) uma proposição representada por ``se $p$ então $q$''.
+\end{block} \pause
+\begin{block}{Notação}
+	$p \rightarrow q$
+\end{block} \pause
+\begin{block}{Semântica}
+	\begin{center}
+		\begin{tabular}{|cc|c|}
+			\hline
+			$p$	&	$q$	&	$p \rightarrow q$	\\
+			\hline
+			V	&	V	&	V	\\
+			V	&	F	&	F	\\
+			F	&	V	&	V	\\
+			F	&	F	&	V	\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{Condicional}
+	\begin{block}{Exemplos}
+		\begin{itemize}
+			\item $p$: Rivaldo foi revelado no Santa Cruz. \hspace*{0.9cm} (V)\\
+			$q$: Neymar é melhor do que Cristiano Ronaldo. \hspace*{0.9cm} (F)\\
+			\hrule
+			\item \pause
+			\item $p \rightarrow q$: Se Rivaldo foi revelado no Santa Cruz \\
+			\hspace*{1.1cm} então Neymar é melhor do que Cristiano Ronaldo.\\ \pause
+			\vspace*{0.3cm}
+			\item $V(p \rightarrow q) = \pause V(p) \rightarrow V(q) = \pause V \rightarrow F = \pause F$
+		\end{itemize}
+	\end{block} \pause
+	\begin{exampleblock}{Outras formas de se ler $p \rightarrow q$}
+		\begin{itemize}[label=-]
+			\item $p$ é condição suficiente para $q$
+			\item $q$ é condição necessária para $p$
+		\end{itemize}
+	\end{exampleblock} \pause
+	\begin{alertblock}{Cuidado!}
+		$p \rightarrow q$ não afirma que de $p$ se deduz $q$.
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}{Questão 014}
+\begin{block}{[Q014]}
+	Sejam as proposições $p$: ``Está frio'' e $q$: ``Está chovendo''. Em linguagem natural, $\sim p$ $\rightarrow \sim q$ é traduzida como 
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item Se não está calor então não está chovendo.
+	\item Se não está frio então não está chovendo.
+	\item É falso que se não está calor então não está chovendo.
+	\item Não é verdade que se está frio então não está chovendo.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Questão 015}
+\begin{block}{[Q015]}
+	Sejam $p$, $q$ e $r$ proposições quaisquer. Se $V(p \wedge q) = F$, \\
+	logo podemos afirmar {\bf categoricamente} que
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item $V($ $(p \wedge q) \rightarrow r$ $) = V$
+	\item $V(p \vee q) = F$
+	\item $V( \sim p) = V$
+	\item $V(r \rightarrow q) = F$
+\end{enumerate}
+\end{frame}
+
+\subsection{Bicondicional}
+\begin{frame}{Bicondicional}
+\begin{block}{Definição}
+	Chama-se de {\bf proposição bicondicional} (ou apenas {\bf bicondicional}) uma proposição representada por ``$p$ se e somente se $q$''.
+\end{block} \pause
+\begin{block}{Notação}
+	$p \leftrightarrow q$
+\end{block} \pause
+\begin{block}{Semântica}
+	\begin{center}
+		\begin{tabular}{|cc|c|}
+			\hline
+			$p$	&	$q$	&	$p \leftrightarrow q$	\\
+			\hline
+			V	&	V	&	V	\\
+			V	&	F	&	F	\\
+			F	&	V	&	F	\\
+			F	&	F	&	V	\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{Bicondicional}
+\begin{block}{Exemplos}
+\begin{itemize}
+	\item $p$: Rivaldo foi revelado no Santa Cruz. \hspace*{0.9cm} (V)\\
+	$q$: Neymar é melhor do que Cristiano Ronaldo. \hspace*{0.9cm} (F)\\
+	\hrule
+	\item \pause
+	\item $p \leftrightarrow q$: Rivaldo foi revelado no Santa Cruz \\
+	\hspace*{1.1cm} sse Neymar é melhor do que Cristiano Ronaldo.\\ \pause
+	\vspace*{0.3cm}
+	\item $V(p \leftrightarrow q) = \pause V(p) \leftrightarrow V(q) = \pause V \leftrightarrow F = \pause F$
+\end{itemize}
+\end{block} \pause
+\begin{exampleblock}{Outras formas de se ler $p \leftrightarrow q$}
+\begin{itemize}[label=-]
+	\item $p$ é condição necessária e suficiente para $q$
+	\item $q$ é condição necessária  e suficiente para $p$
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Questão 016}
+\begin{block}{[Q016]}
+	Sejam as proposições $p$: ``Jorge é rico'' e $q$: ``Carlos é feliz''. \\Em linguagem simbólica,
+	\begin{center}
+	``Jorge não é rico, se e somente se, Carlos for feliz''
+	\end{center}
+	é expressa como
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item $\sim p \leftrightarrow q$
+	\item $\sim p$ $\leftrightarrow \sim q$
+	\item $\sim p \leftarrow q$
+	\item $\sim p$ $\leftarrow \sim q$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Questão 017}
+\begin{block}{[Q017]}
+	Sejam $p$, $q$ e $r$ proposições quaisquer. Se $V(p \wedge q) = F$, \\
+	logo podemos afirmar {\bf categoricamente} que
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item $V($ $(p \wedge q) \leftrightarrow r$ $) = V$
+	\item $V(p \rightarrow q) = F$
+	\item $V(r \leftrightarrow r) = V$
+	\item $V(r \rightarrow (p \wedge q)) = F$
+\end{enumerate}
+\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
