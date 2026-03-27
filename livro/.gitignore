@@ -1,0 +1,49 @@
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+
+## Intermediate documents:
+*.dvi
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# beamer
+*.nav
+*.snm
+*.vrb
+
+# Bibliografia e biblatex
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*-blx.aux
+*-blx.bib
+
+# Índices e makeindex
+*.idx
+*.ind
+*.ilg      # log do makeindex (sempre ignorar)
+
+# Arquivos de estilo do makeindex
+*.ist      # ignore se for gerado automaticamente; versionar se for manual
+
+# Outros
+*.ptc
+*.db
+
+# Diretório privado
+privado/
+
+# No final do arquivo, adicione:
+*.ilg
+**/*.ilg
