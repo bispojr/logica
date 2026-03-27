@@ -1,0 +1,223 @@
+\chapter{Lógica Proposicional}
+
+\section{Introdução}
+
+A Lógica Proposicional constitui um dos fundamentos da Matemática e da Ciência da Computação. Seu objetivo é estudar proposições, seus valores lógicos e as formas pelas quais podem ser combinadas para construir argumentos válidos.
+
+\section{Proposições}
+
+\subsection{Definição}
+ 
+Uma \textbf{proposição} é todo conjunto de palavras ou símbolos que exprime um pensamento de sentido completo, ao qual se pode atribuir um valor lógico: verdadeiro ou falso.
+
+\subsection{Características}
+
+As proposições possuem as seguintes características:
+
+\begin{itemize}
+    \item Declaram fatos;
+    \item Exprimem juízos.
+\end{itemize}
+
+\subsection{Exemplos}
+
+\begin{itemize}
+    \item A Lua é um satélite da Terra.
+    \item Recife é a capital de Pernambuco.
+    \item $\pi > 5$
+    \item $\sin\left(\frac{\pi}{2}\right) = 1$
+\end{itemize}
+
+\subsection{Não-Proposições}
+
+Nem toda sentença é uma proposição. Perguntas, ordens ou exclamações não possuem valor lógico.
+
+\begin{itemize}
+    \item Qual horário o ônibus passará hoje?
+\end{itemize}
+
+\section{Princípios Fundamentais da Lógica}
+
+\subsection{Princípio da Não-Contradição}
+
+Uma proposição não pode ser verdadeira e falsa ao mesmo tempo.
+
+\subsection{Princípio do Terceiro Excluído}
+
+Toda proposição é ou verdadeira ou falsa, não existindo uma terceira possibilidade.
+
+\subsection{Consequência}
+
+Esses princípios implicam que a lógica clássica é \textbf{bivalente}, ou seja, admite apenas dois valores lógicos.
+
+\subsection{Exemplos}
+
+\begin{itemize}
+    \item A Lua é um satélite da Terra. \hfill (Verdadeira)
+    \item Vasco da Gama descobriu o Brasil. \hfill (Falsa)
+    \item Recife é a capital de Pernambuco. \hfill (Verdadeira)
+    \item Dante escreveu ``Os Lusíadas''. \hfill (Falsa)
+\end{itemize}
+
+\section{Tipos de Proposições}
+
+\subsection{Proposições Simples}
+
+Uma \textbf{proposição simples} (ou atômica) é aquela que não contém nenhuma outra proposição como parte.
+
+\paragraph{Representação}
+
+São geralmente representadas por letras minúsculas:
+\[
+p, q, r, \ldots
+\]
+
+\paragraph{Exemplos}
+
+\begin{itemize}
+    \item $p$: Carlos é careca.
+    \item $q$: Pedro é estudante.
+    \item $r$: O número 25 é um quadrado perfeito.
+\end{itemize}
+
+\subsection{Proposições Compostas}
+
+Uma \textbf{proposição composta} (ou molecular) é formada pela combinação de duas ou mais proposições simples.
+
+\paragraph{Representação}
+
+Podem ser representadas por letras maiúsculas:
+\[
+P, Q, R, \ldots
+\]
+
+\paragraph{Exemplos}
+
+\begin{itemize}
+    \item $P$: Carlos é careca \textbf{e} Pedro é estudante.
+    \item $Q$: Carlos é careca \textbf{ou} Pedro é estudante.
+    \item $R$: \textbf{Se} Carlos é careca, \textbf{então} é infeliz.
+\end{itemize}
+
+Essas proposições também são chamadas de \textbf{fórmulas proposicionais}.
+
+\section{Conectivos Lógicos}
+
+\subsection{Definição}
+
+Os conectivos são palavras ou símbolos utilizados para formar novas proposições a partir de outras.
+
+\subsection{Principais Conectivos}
+
+\begin{itemize}
+    \item Conjunção: $p \land q$ (``e'')
+    \item Disjunção: $p \lor q$ (``ou'')
+    \item Negação: $\neg p$ (``não'')
+    \item Condicional: $p \rightarrow q$ (``se... então'')
+    \item Bicondicional: $p \leftrightarrow q$ (``se, e somente se'')
+\end{itemize}
+
+\subsection{Exemplos}
+
+\begin{itemize}
+    \item O número 6 é par \textbf{e} o número 8 é cubo perfeito.
+    \item \textbf{Não} está chovendo.
+    \item \textbf{Se} Jorge é engenheiro, \textbf{então} sabe Matemática.
+    \item Um triângulo é equilátero \textbf{se, e somente se,} é equiângulo.
+\end{itemize}
+
+\section{Valor Lógico}
+
+\subsection{Definição}
+
+O valor lógico de uma proposição indica se ela é verdadeira ou falsa.
+
+\subsection{Notação}
+
+\[
+V(p)
+\]
+
+\begin{itemize}
+    \item Se $p$ é verdadeira, então $V(p) = V$;
+    \item Se $p$ é falsa, então $V(p) = F$.
+\end{itemize}
+
+\subsection{Exemplos}
+
+\begin{itemize}
+    \item $p$: O Sol é verde. \hfill $V(p) = F$
+    \item $q$: Um hexágono tem 9 diagonais. \hfill $V(q) = V$
+    \item $r$: $2$ é raiz de $x^2 + 3x - 4 = 0$. \hfill $V(r) = F$
+\end{itemize}
+
+\section{Tabelas-Verdade}
+
+\subsection{Princípio Fundamental}
+
+O valor lógico de uma proposição composta depende exclusivamente dos valores lógicos das proposições simples que a compõem.
+
+\subsection{Definição}
+
+Uma \textbf{tabela-verdade} é um dispositivo que apresenta todas as possíveis combinações de valores lógicos de uma proposição.
+
+\subsection{Número de Linhas}
+
+Se uma proposição possui $n$ variáveis, então sua tabela-verdade terá:
+
+\[
+2^n \text{ linhas}
+\]
+
+\subsection{Exemplos}
+
+\subsubsection{Uma Proposição}
+
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+$p$ \\
+\hline
+V \\
+F \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Duas Proposições}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$p$ & $q$ \\
+\hline
+V & V \\
+V & F \\
+F & V \\
+F & F \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Três Proposições}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$p$ & $q$ & $r$ \\
+\hline
+V & V & V \\
+V & V & F \\
+V & F & V \\
+V & F & F \\
+F & V & V \\
+F & V & F \\
+F & F & V \\
+F & F & F \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Considerações Finais}
+
+Neste capítulo foram apresentados os conceitos fundamentais da lógica proposicional, incluindo a definição de proposições, seus tipos, conectivos lógicos e o uso de tabelas-verdade. Esses conceitos são essenciais para o desenvolvimento do raciocínio lógico formal e servirão de base para estudos mais avançados, como equivalências lógicas, inferência e lógica de predicados.
