@@ -64,11 +64,11 @@
 
 \usepackage[most]{tcolorbox}
 
-\include{ambientes/questao}
-\include{ambientes/alternativas}
-\include{ambientes/comentario-questao}
-\include{ambientes/comentario-item}
-\include{ambientes/resposta-correta}
+\input{ambientes/questao}
+\input{ambientes/alternativas}
+\input{ambientes/comentario-questao}
+\input{ambientes/comentario-item}
+\input{ambientes/resposta-correta}
 
 \begin{document}
 
@@ -157,16 +157,16 @@
 %\include{partes/02/capitulo-04}
 
 
-\chapter*{Bibliography}
+\chapter*{Referências} % Unnumbered chapter for the bibliography
 \markboth{\sffamily\normalsize\bfseries Bibliography}{\sffamily\normalsize\bfseries Bibliography} % Set the page headers to display a Bibliography chapter name
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}} % Add a Bibliography heading to the table of contents
 
-\section*{Articles}
+\section*{Artigos}
 \addcontentsline{toc}{section}{Articles} % Add the Articles subheading to the table of contents
 
 \printbibliography[heading=bibempty, type=article] % Output article bibliography entries
 
-\section*{Books}
+\section*{Livros}
 \addcontentsline{toc}{section}{Books} % Add the Books subheading to the table of contents
 
 \printbibliography[heading=bibempty, type=book] % Output book bibliography entries
