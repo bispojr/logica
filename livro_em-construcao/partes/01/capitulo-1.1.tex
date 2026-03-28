@@ -1,40 +1,85 @@
 \chapter{Peer Instruction}
 
-O debate sobre a melhoria da qualidade do ensino superior tem ganhado cada vez mais espaço, especialmente no contexto de metodologias ativas de aprendizagem. Em eventos acadêmicos voltados à inovação pedagógica, como congressos e oficinas, observa-se um esforço crescente em discutir práticas que tornem o ensino mais efetivo, significativo e alinhado às demandas contemporâneas da formação profissional.
+O debate sobre a melhoria da qualidade do ensino superior tem ganhado cada vez mais espaço, especialmente no contexto de metodologias ativas de aprendizagem. Em eventos acadêmicos voltados à inovação pedagógica, observa-se um esforço crescente em discutir práticas que tornem o ensino mais efetivo, significativo e alinhado às demandas contemporâneas do mundo do trabalho.
 
-Nesse contexto, destaca-se a reflexão sobre a formação docente no ensino superior. Diferentemente da educação básica, muitos professores universitários são formados prioritariamente em suas áreas específicas de conhecimento — como computação, engenharia ou matemática — sem necessariamente terem passado por uma formação pedagógica estruturada. Essa lacuna faz com que grande parte dos docentes precise desenvolver, de maneira autônoma, competências relacionadas ao ensino, buscando estratégias, metodologias e abordagens que promovam uma aprendizagem mais efetiva.
+Nesse contexto, destaca-se a reflexão sobre a formação docente no ensino superior. Diferentemente da educação básica, muitos professores universitários são formados prioritariamente em suas áreas específicas de conhecimento (como Computação, Engenharia ou Matemática) sem necessariamente terem passado por uma formação pedagógica estruturada. Essa lacuna faz com que grande parte dos docentes precise desenvolver, de maneira autônoma, competências relacionadas ao ensino, buscando estratégias, metodologias e abordagens que possam promover uma aprendizagem mais efetiva.
 
 Essa busca individual por aprimoramento pedagógico caracteriza um perfil comum entre docentes do ensino superior: o professor pesquisador de sua própria prática. Trata-se de um profissional que, ao perceber limitações no modelo tradicional de ensino, passa a investigar alternativas, experimentar novas abordagens e refletir continuamente sobre sua atuação em sala de aula. Esse movimento não apenas contribui para o desenvolvimento profissional do docente, mas também impacta diretamente na qualidade da aprendizagem dos estudantes.
 
 Dentro desse cenário, emergem as metodologias ativas como uma resposta às limitações do ensino tradicional centrado na transmissão de conteúdo. Essas abordagens propõem uma mudança de paradigma: o aluno deixa de ser um agente passivo e passa a assumir um papel ativo na construção do conhecimento. O professor, por sua vez, deixa de ser o único detentor do saber e passa a atuar como mediador, facilitador e {\it designer} de experiências de aprendizagem.
 
-Entre as diversas metodologias ativas, a (\textit{Peer Instruction})\footnote{Traduzido em português como ``Instrução pelos Colegas'' por Ives Araujo e Eric Mazur \cite{araujo:2013}.} se destaca por sua simplicidade de implementação e forte embasamento teórico e empírico. Desenvolvida no contexto do ensino de ciências exatas, essa abordagem busca promover a aprendizagem por meio da interação entre estudantes, utilizando questões conceituais e discussões em grupo como elementos centrais do processo.
+Entre as diversas metodologias ativas, a \textit{Peer Instruction}\footnote{Traduzido em português como ``Instrução pelos Colegas'' por Ives Araujo e Eric Mazur \cite{araujo:2013}.} se destaca por sua simplicidade de implementação e forte embasamento teórico e empírico. Desenvolvida no contexto do ensino de ciências exatas, essa abordagem busca promover a aprendizagem por meio da interação entre estudantes, utilizando questões conceituais e discussões em grupo como elementos centrais do processo.
 
 A adoção dessa metodologia, no entanto, não ocorre de forma aleatória. Ela é frequentemente motivada por inquietações surgidas na prática docente, como a percepção de que aulas expositivas longas não garantem aprendizagem efetiva, ou que os alunos conseguem resolver exercícios mecanicamente sem compreender os conceitos envolvidos. Essas observações levam o professor a repensar sua prática e a buscar estratégias que favoreçam uma aprendizagem mais profunda e significativa.
 
-Além disso, é importante reconhecer que o processo de ensino-aprendizagem é, por natureza, dinâmico e colaborativo. Ao mesmo tempo em que o professor ensina, ele também aprende — seja com seus alunos, seja com a reflexão sobre sua prática. Essa perspectiva reforça a ideia de que a docência é um processo contínuo de desenvolvimento, no qual a experimentação, a adaptação e o compartilhamento de experiências desempenham papel fundamental.
+Além disso, é importante reconhecer que o processo de ensino-aprendizagem é, por natureza, dinâmico e colaborativo. Ao mesmo tempo em que o professor ensina, ele também aprende (seja com seus alunos, seja com a reflexão sobre sua prática). Essa perspectiva reforça a ideia de que a docência é um processo contínuo de desenvolvimento, no qual a experimentação, a adaptação e o compartilhamento de experiências desempenham papel fundamental.
 
-Dessa forma, este capítulo tem como objetivo apresentar e discutir a metodologia de Instrução pelos Colegas no ensino superior, explorando seus fundamentos, etapas de implementação e implicações pedagógicas. A proposta é oferecer ao leitor não apenas uma descrição técnica da abordagem, mas também uma reflexão sobre sua aplicabilidade e potencial transformador no contexto educacional.
+Dessa forma, este capítulo tem como objetivo apresentar e discutir a {\it Peer Instruction} no ensino superior, explorando seus fundamentos, etapas de implementação e implicações pedagógicas. A proposta é oferecer ao leitor não apenas uma descrição técnica da abordagem, mas também uma reflexão sobre sua aplicabilidade e potencial transformador no contexto educacional.
 
 \section{Motivação e Problematização}
 
-A adoção da metodologia foi motivada por algumas constatações observadas em sala de aula:
+A adoção da \textit{Peer Instruction} não surge de forma arbitrária, mas como resposta a um conjunto de inquietações observadas na prática docente. Essas inquietações refletem desafios recorrentes no ensino superior, especialmente em áreas das ciências exatas e da computação.
 
-\subsection{Limitações das aulas expositivas}
+\subsection{Limitações das aulas expositivas tradicionais}
 
-Aulas expositivas longas tendem a ser cansativas e pouco efetivas. Estudos indicam que a capacidade de atenção dos alunos é limitada, o que compromete a aprendizagem em exposições prolongadas.
+Uma das primeiras constatações refere-se à limitação das aulas expositivas longas. Embora amplamente utilizadas no ensino superior, esse formato tende a comprometer a atenção dos estudantes ao longo do tempo. Mesmo quando há esforço por parte dos alunos em acompanhar a aula, a extensão excessiva da exposição pode torná-la cansativa e pouco produtiva.
 
-\subsection{Postura pragmática dos estudantes}
+Essa limitação não está necessariamente associada à falta de interesse ou dedicação dos estudantes, mas a aspectos cognitivos relacionados à capacidade de atenção e retenção de informação. Dessa forma, a simples transmissão prolongada de conteúdo não garante a aprendizagem, evidenciando a necessidade de estratégias que promovam maior engajamento ao longo da aula.
 
-Muitos alunos priorizam a aprovação em detrimento da aprendizagem. Em situações de dificuldade, tendem a escolher ``passar na disciplina'' ao invés de compreender profundamente o conteúdo.
+\subsection{Pragmatismo discente e foco na aprovação}
 
-\subsection{Aprendizagem entre pares}
+Outro aspecto relevante é o comportamento pragmático dos estudantes frente ao processo de aprendizagem. Em situações de pressão (como dificuldades acumuladas ou avaliações iminentes), muitos alunos tendem a priorizar a aprovação na disciplina em detrimento da compreensão do conteúdo.
 
-Os alunos não são receptores passivos de conhecimento. Eles trazem experiências e saberes prévios que podem (e devem) ser explorados no processo de ensino.
+Esse comportamento revela uma distorção no propósito da sala de aula. Idealmente, esse espaço deveria ser orientado à aprendizagem; no entanto, na prática, frequentemente se torna um ambiente centrado na obtenção de notas. Diante de um dilema entre “aprender” e “passar”, a escolha pela aprovação imediata evidencia fragilidades no modelo educacional vigente.
 
-\subsection{Foco em receitas ao invés de conceitos}
+Tal constatação é particularmente preocupante, pois compromete a formação e o embasamento conceitual de profissionais para serem capazes de aplicar o conhecimento de forma crítica e contextualizada. Esse conhecimento pragmático, focado apenas na resolução de exercícios, não prepara adequadamente os estudantes para os desafios do mundo real, em que o domínio e a profundidade do seu campo de saber são essenciais.
 
-Em áreas como as ciências exatas, é comum o ensino baseado em procedimentos mecânicos (``receitas''), sem a devida compreensão dos conceitos subjacentes.
+\subsection{O papel do conhecimento prévio e da aprendizagem entre pares}
+
+Uma terceira constatação importante diz respeito à visão tradicional do professor como único detentor do conhecimento. Embora o docente possua maior experiência e domínio conceitual, os alunos também trazem consigo conhecimentos prévios, construídos ao longo de suas trajetórias acadêmicas e pessoais.
+
+Desconsiderar esse repertório prévio implica desperdiçar um recurso valioso no processo de ensino-aprendizagem. Ao contrário, quando esse conhecimento é mobilizado e integrado à aula, cria-se um ambiente mais rico, no qual os estudantes participam ativamente da construção do saber.
+
+Nesse contexto, a interação entre pares emerge como um elemento fundamental. A troca de ideias entre alunos permite que conceitos sejam explicados em diferentes linguagens e perspectivas, favorecendo a compreensão e a consolidação do conhecimento.
+
+\subsection{Aprendizagem mecânica versus compreensão conceitual}
+
+Um dos problemas mais críticos observados, especialmente em áreas de exatas, é a predominância de uma aprendizagem baseada em procedimentos mecânicos. Muitos estudantes tornam-se proficientes na aplicação de fórmulas e algoritmos, mas apresentam dificuldades quando confrontados com situações que exigem compreensão conceitual.
+
+Por exemplo, é comum que alunos consigam aplicar corretamente uma fórmula física ou matemática, mas não consigam explicar o significado das grandezas envolvidas ou interpretar o fenômeno representado. Essa dissociação entre execução e compreensão evidencia uma fragilidade na aprendizagem.
+
+Esse tipo de formação gera profissionais que sabem “fazer”, mas não necessariamente sabem “pensar sobre o que fazem”. Em contextos reais, onde os problemas são menos estruturados, essa limitação torna-se ainda mais evidente.
+
+\subsection{Necessidade de mudança na prática docente}
+
+Diante dessas constatações, torna-se evidente a necessidade de repensar a prática docente. O modelo tradicional, centrado na exposição de conteúdo, mostra-se insuficiente para promover uma aprendizagem profunda e duradoura.
+
+A mudança proposta não implica a eliminação da aula expositiva, mas sua ressignificação. Em vez de longos períodos de aulas expositivas, propõe-se a utilização de exposições mais curtas, integradas a atividades que estimulem a participação ativa dos estudantes.
+
+Além disso, o professor passa a assumir um papel mais estratégico no planejamento da aprendizagem, atuando como um \textit{designer} de experiências educativas. Isso envolve a criação de situações que desafiem os alunos, promovam o diálogo e incentivem a construção coletiva do conhecimento.
+
+\subsection{O professor como aprendiz de sua própria prática}
+
+Outro elemento importante evidenciado na prática docente é o reconhecimento de que o professor também está em constante processo de aprendizagem. Ao observar as dificuldades dos alunos e refletir sobre os resultados de suas aulas, o docente passa a repensar suas estratégias e buscar melhorias contínuas.
+
+Esse movimento de autoavaliação e experimentação caracteriza uma postura investigativa, na qual o professor atua como pesquisador de sua própria prática. Tal postura é essencial para a adoção de metodologias inovadoras, uma vez que essas exigem adaptação, testes e ajustes ao longo do tempo.
+
+\subsection{Síntese das problemáticas}
+
+As constatações apresentadas podem ser sintetizadas em alguns desafios centrais:
+
+\begin{itemize}
+    \item Baixa efetividade de aulas expositivas longas;
+    \item Foco dos estudantes na aprovação em vez da aprendizagem;
+    \item Subutilização do conhecimento prévio dos alunos;
+    \item Predominância de aprendizagem mecânica;
+    \item Necessidade de maior engajamento e participação ativa;
+    \item Demanda por desenvolvimento pedagógico contínuo por parte do docente.
+\end{itemize}
+
+Esses desafios constituem o ponto de partida para a busca por metodologias que promovam uma aprendizagem mais significativa. Nesse contexto, a {\it Peer Instruction} apresenta-se como uma alternativa promissora, ao integrar exposição, interação e reflexão no processo de ensino-aprendizagem.
+
+
 
 \section{Fundamentos da Instrução pelos Colegas}
 
