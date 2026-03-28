@@ -1,37 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The Legrand Orange Book
-% LaTeX Template
-% Version 3.1 (February 18, 2022)
-%
-% This template originates from:
-% https://www.LaTeXTemplates.com
-%
-% Authors:
-% Vel (vel@latextemplates.com)
-% Mathias Legrand (legrand.mathias@gmail.com)
-%
-% License:
-% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-%
-% Compiling this template:
-% This template uses biber for its bibliography and makeindex for its index.
-% When you first open the template, compile it from the command line with the 
-% commands below to make sure your LaTeX distribution is configured correctly:
-%
-% 1) pdflatex main
-% 2) makeindex main.idx -s indexstyle.ist
-% 3) biber main
-% 4) pdflatex main x 2
-%
-% After this, when you wish to update the bibliography/index use the appropriate
-% command above and make sure to compile with pdflatex several times 
-% afterwards to propagate your changes to the document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\input{pre-textuais/01-comentarios.tex}
 
 \documentclass[
 	11pt, % Default font size, select one of 10pt, 11pt or 12pt
@@ -74,47 +41,9 @@
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
+\include{pre-textuais/02-pagina-titulo.tex}
+\include{pre-textuais/03-copyright.tex}
 
-\titlepage % Output the title page
-	{\includegraphics[width=\paperwidth]{background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
-	{ % Title(s) and author(s)
-		\centering\sffamily % Font styling
-		{\Huge\bfseries Lógica para Ciência da Computação\par} % Book title
-		\vspace{16pt} % Vertical whitespace
-		{\LARGE Uma abordagem ativa utilizando a Peer Instruction\par} % Subtitle
-		\vspace{24pt} % Vertical whitespace
-		{\huge\bfseries Esdras L. Bispo Jr.\par} % Author name
-	}
-
-%----------------------------------------------------------------------------------------
-%	COPYRIGHT PAGE
-%----------------------------------------------------------------------------------------
-
-\thispagestyle{empty} % Suppress headers and footers on this page
-
-~\vfill % Push the text down to the bottom of the page
-
-\noindent Copyright \copyright\ 2026 Esdras L. Bispo Jr.\\ % Copyright notice
-
-%\noindent \textsc{Published by Publisher}\\ % Publisher
-
-\noindent 
-\href{https://www.github.com/bispojr/logica}{
-    \faGithub\hspace{0.5em}\texttt{github.com/bispojr/logica}
-}\\
-
-\noindent Licenciado sob a Licença Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional (``Licença''). Você não pode utilizar este material exceto em conformidade com a Licença. Uma cópia da Licença pode ser obtida em \url{https://creativecommons.org/licenses/by-nc-sa/4.0}. Salvo quando exigido pela legislação aplicável ou acordado por escrito, o material distribuído sob esta Licença é fornecido ``no estado em que se encontra'', sem garantias ou condições de qualquer tipo, sejam expressas ou implícitas. Consulte a Licença para obter informações específicas sobre permissões e limitações.
-
-\vspace{1em}
-
-\begin{center}
-\includegraphics[width=0.2\textwidth]{Images/cc_by_nc_sa.png}
-\end{center}
-
-%\noindent \textit{First printing, March 2022} % Printing/edition date
 
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
@@ -136,7 +65,7 @@
 %	PART
 %----------------------------------------------------------------------------------------
 
-\part{Peer Instruction}
+\part{Fundamentos Educacionais}
 
 %----------------------------------------------------------------------------------------
 %	SECTIONING EXAMPLES CHAPTER
@@ -149,6 +78,7 @@
 %------------------------------------------------ 
 
 \include{partes/01/capitulo-1.1}
+\include{partes/01/capitulo-1.2}
 
 \part{Material de Referência}
 
