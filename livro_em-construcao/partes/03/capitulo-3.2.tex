@@ -11,6 +11,16 @@ Qual o valor lógico da proposição ``Não é verdade que 12 é um número ímp
 
 \end{questao}
 
+\begin{comentario_questao}
+
+    A proposição ``12 é um número ímpar'' é falsa, pois 12 é um número par. Portanto, a negação dessa proposição, que é ``Não é verdade que 12 é um número ímpar'', é verdadeira.
+
+    \respostacorreta{A}
+
+\end{comentario_questao}
+
+\newpage
+
 \begin{questao}{Questão 8}
 
 Sejam $p$ e $q$ duas proposições. Se $V(p \wedge q) = V$, logo podemos afirmar que
@@ -24,9 +34,25 @@ Sejam $p$ e $q$ duas proposições. Se $V(p \wedge q) = V$, logo podemos afirmar
 
 \end{questao}
 
+\begin{comentario_questao}
+
+    \comentarioitem{A}{Se $p \wedge q$ é verdadeiro, isso significa que ambas as proposições $p$ e $q$ são verdadeiras. Portanto, $V(p)$ não pode ser falso.}
+
+    \comentarioitem{B}{Como comentado anteriormente, $V(p)$ deve ser verdadeiro.}
+
+    \comentarioitem{C}{Como $p$ e $q$ são verdadeiras, logo $V(q)$ não pode ser falso.}
+
+    \comentarioitem{D}{Como $p$ e $q$ são verdadeiras, logo {\bf é possível} definir a valoração das proposições.}
+
+    \respostacorreta{B}
+
+\end{comentario_questao}
+
+\newpage
+
 \begin{questao}{Questão 9}
 
-Sejam as proposições $p$: ``Está frio'' e $q$: ``Está chovendo''. Em linguagem natural, $\sim p \wedge \sim q$ é traduzida como
+Sejam as proposições $p$: ``Está frio'' e $q$: ``Está chovendo''. Em linguagem natural, $\sim p$ $\wedge \sim q$ é traduzida como
 
 \begin{alternativas}
     \item Não está calor ou nem está chovendo.
@@ -37,18 +63,50 @@ Sejam as proposições $p$: ``Está frio'' e $q$: ``Está chovendo''. Em linguag
 
 \end{questao}
 
+\begin{comentario_questao}
+
+    \comentarioitem{A}{A expressão $\sim p$ $\wedge \sim q$ indica a conjunção das negações das proposições $p$ e $q$. Portanto, a tradução correta é que não está frio e nem está chovendo. ``Está calor'' não necessariamente é a negação de ``Está frio'' (tendo em vista que existem outras condições possíveis, como ``Está nublado'' ou ``Está ensolarado''). E, o conectivo utilizado é o ``e'' (conjunção), e não o ``ou'' (disjunção).}
+
+    \comentarioitem{B}{O conectivo utilizado é o ``e'' (conjunção), e não o ``ou'' (disjunção). E a segunda parte da tradução não corresponde à expressão dada, pois $\sim q$ indica que não está chovendo.}
+
+    \comentarioitem{C}{``Está calor'' não necessariamente é a negação de ``Está frio'' (como dito anteriormente).}
+
+    \comentarioitem{D}{Esta é a tradução correta: não está frio e nem está chovendo.}
+
+    \respostacorreta{D}
+
+\end{comentario_questao}
+
+\newpage
+
 \begin{questao}{Questão 10}
 
 Sejam as proposições $p$: ``Jorge é rico'' e $q$: ``Carlos é feliz''. Em linguagem simbólica, ``Jorge não é rico, mas Carlos é feliz'' é expresso como
 
 \begin{alternativas}
     \item $\sim p \vee q$
-    \item $\sim p \vee \sim q$
+    \item $\sim p$ $\vee \sim q$
     \item $\sim p \wedge q$
-    \item $\sim p \wedge \sim q$
+    \item $\sim p$ $\wedge \sim q$
 \end{alternativas}
 
 \end{questao}
+
+\begin{comentario_questao}
+
+    \comentarioitem{A}{O conectivo utilizado na frase é o ``mas'', que é uma conjunção, e não o ``ou'' (disjunção). O ponto dessa alternativa é justamente confundir o aluno, fazendo-o pensar que o ``mas'' pode ser traduzido como algo diferente de uma conjunção.}
+
+    \comentarioitem{B}{O conectivo utilizado na frase é o ``mas'', que é uma conjunção, e não o ``ou'' (disjunção). E a segunda parte da expressão não corresponde à frase dada, pois $q$ indica que Carlos é feliz, e não que Carlos não é feliz.}
+
+    \comentarioitem{C}{Esta é a expressão correta: $\sim p$ indica que Jorge não é rico, e $q$ indica que Carlos é feliz. O conectivo utilizado é o ``mas'', que cumpre uma função de conjunção, nesse caso.}
+
+    \comentarioitem{D}{A segunda parte da expressão não corresponde à frase dada, pois $q$ indica que Carlos é feliz, e não que Carlos não é feliz.}
+
+    \respostacorreta{C}
+
+\end{comentario_questao}
+
+\newpage
 
 \begin{questao}{Questão 11}
 
@@ -58,10 +116,26 @@ Sejam $p$ e $q$ duas proposições. Se $V(\sim p \vee q) = V$ e $V(p) = F$, logo
     \item $V(q) = F$
     \item $V(q) = V$
     \item $V(p) = V$
-    \item Não é possível definir $V(q)$
+    \item Não é possível definir exatamente $V(q)$
 \end{alternativas}
 
 \end{questao}
+
+\begin{comentario_questao}
+
+    \comentarioitem{A}{Se $V(\sim p \vee q) = V$, isso significa que pelo menos uma das proposições $\sim p$ ou $q$ é verdadeira. Como $V(p) = F$, então $\sim p$ é verdadeiro, o que já satisfaz a condição para que a disjunção seja verdadeira. Portanto, não é necessário que $V(q)$ seja falso.}
+
+    \comentarioitem{B}{Como $V(p) = F$, então $\sim p$ é verdadeiro. Isso já garante que a disjunção $\sim p \vee q$ seja verdadeira, independentemente do valor de $q$. Portanto, $V(q)$ pode ser verdadeiro ou falso, e não podemos afirmar com certeza que $V(q) = V$.}
+
+    \comentarioitem{C}{A afirmação de que $V(p) = V$ é falsa, pois foi dado que $V(p) = F$.}
+
+    \comentarioitem{D}{Justamente, não é possível definir exatamente $V(q)$, pois a disjunção $\sim p \vee q$ é verdadeira devido ao fato de $\sim p$ ser verdadeiro, independentemente do valor de $q$. Portanto, $V(q)$ pode ser tanto verdadeiro quanto falso.}
+
+    \respostacorreta{D}
+
+\end{comentario_questao}
+
+\newpage
 
 \begin{questao}{Questão 12}
 
@@ -75,3 +149,17 @@ Sejam $p$ e $q$ duas proposições. Se $V(p \vee q) = V$ e $V(p \wedge q) = F$, 
 \end{alternativas}
 
 \end{questao}
+
+\begin{comentario_questao}
+
+    \comentarioitem{A}{Se $V(p \vee q) = V$, isso significa que pelo menos uma das proposições $p$ ou $q$ é verdadeira. Se $V(p \wedge q) = F$, isso significa que não é o caso que ambas as proposições são verdadeiras. Portanto, pelo menos uma das proposições deve ser falsa.}
+
+    \comentarioitem{B}{Não podemos afirmar com certeza que $V(p) = V$, pois a disjunção $p \vee q$ pode ser verdadeira devido a $q$ ser verdadeiro, mesmo que $p$ seja falso.}
+
+    \comentarioitem{C}{Não podemos afirmar com certeza que $V(q) = V$, pois a disjunção $p \vee q$ pode ser verdadeira devido a $p$ ser verdadeiro, mesmo que $q$ seja falso.}
+
+    \comentarioitem{D}{Podemos afirmar algo sobre as proposições, especificamente que pelo menos uma delas é falsa, como explicado na alternativa A.}       
+
+    \respostacorreta{A}
+    
+\end{comentario_questao}
