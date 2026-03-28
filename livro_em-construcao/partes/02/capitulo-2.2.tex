@@ -1,0 +1,153 @@
+\chapter{Operações Lógicas}
+
+As operações lógicas são fundamentais no estudo da lógica proposicional. Elas permitem a construção de proposições mais complexas a partir de proposições simples, obedecendo às regras do cálculo proposicional.
+
+As principais operações lógicas são:
+\begin{itemize}
+    \item Negação;
+    \item Conjunção;
+    \item Disjunção;
+    \item Disjunção exclusiva;
+    \item Condicional;
+    \item Bicondicional.
+\end{itemize}
+
+\section{Negação}
+
+\subsection{Definição}
+Chama-se \textbf{negação de uma proposição} $p$ a proposição representada por ``não $p$''.
+
+\subsection{Notação}
+A negação de $p$ é representada por:
+\[
+\sim p
+\]
+
+\subsection{Semântica}
+A tabela-verdade da negação é dada por:
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$p$ & $\sim p$ \\
+\hline
+V & F \\
+F & V \\
+\hline
+\end{tabular}
+\end{center}
+
+Ou seja, a negação inverte o valor lógico da proposição.
+
+\subsection{Exemplos}
+\begin{itemize}
+    \item $p$: Santa Cruz é melhor do que o Sport.\\
+    $\sim p$: Santa Cruz \textbf{não} é melhor do que o Sport.
+
+    \item $q$: O professor de Lógica é o mais bonito da UFJ.\\
+    $\sim q$: \textbf{É falso} que o professor de Lógica é o mais bonito da UFJ.
+\end{itemize}
+
+\subsection{Observação}
+Se uma proposição é falsa, sua negação será verdadeira. Por exemplo:
+\begin{itemize}
+    \item $p$: 12 é um número ímpar (F)\\
+    \item $\sim p$: Não é verdade que 12 é um número ímpar (V)
+\end{itemize}
+
+\section{Conjunção}
+
+\subsection{Definição}
+Chama-se \textbf{conjunção de duas proposições} $p$ e $q$ a proposição representada por ``$p$ e $q$''.
+
+\subsection{Notação}
+A conjunção é representada por:
+\[
+p \wedge q
+\]
+
+\subsection{Semântica}
+A tabela-verdade da conjunção é:
+
+\begin{center}
+\begin{tabular}{|cc|c|}
+\hline
+$p$ & $q$ & $p \wedge q$ \\
+\hline
+V & V & V \\
+V & F & F \\
+F & V & F \\
+F & F & F \\
+\hline
+\end{tabular}
+\end{center}
+
+A conjunção só é verdadeira quando ambas as proposições são verdadeiras.
+
+\subsection{Exemplo}
+\begin{itemize}
+    \item $p$: Rivaldo foi revelado no Santa Cruz. \hspace*{0.5cm} (V)
+    \item $q$: Neymar é melhor do que Cristiano Ronaldo. \hspace*{0.5cm} (F)
+
+    \item $p \wedge q$: Rivaldo foi revelado no Santa Cruz e Neymar é melhor do que Cristiano Ronaldo.
+
+    \item $V(p \wedge q) = V(p) \wedge V(q) = V \wedge F = F$
+\end{itemize}
+
+\subsection{Interpretação}
+Para que uma conjunção seja verdadeira, todas as partes devem ser verdadeiras. Basta que uma seja falsa para que toda a proposição seja falsa.
+
+\section{Disjunção}
+
+\subsection{Definição}
+Chama-se \textbf{disjunção de duas proposições} $p$ e $q$ a proposição representada por ``$p$ ou $q$''.
+
+\subsection{Notação}
+A disjunção é representada por:
+\[
+p \vee q
+\]
+
+\subsection{Semântica}
+A tabela-verdade da disjunção é:
+
+\begin{center}
+\begin{tabular}{|cc|c|}
+\hline
+$p$ & $q$ & $p \vee q$ \\
+\hline
+V & V & V \\
+V & F & V \\
+F & V & V \\
+F & F & F \\
+\hline
+\end{tabular}
+\end{center}
+
+A disjunção é falsa apenas quando ambas as proposições são falsas.
+
+\subsection{Exemplo}
+\begin{itemize}
+    \item $p$: Rivaldo foi revelado no Santa Cruz. \hspace*{0.5cm} (V)
+    \item $q$: Neymar é melhor do que Cristiano Ronaldo. \hspace*{0.5cm} (F)
+
+    \item $p \vee q$: Rivaldo foi revelado no Santa Cruz ou Neymar é melhor do que Cristiano Ronaldo.
+
+    \item $V(p \vee q) = V(p) \vee V(q) = V \vee F = V$
+\end{itemize}
+
+\subsection{Interpretação}
+Na lógica proposicional, o ``ou'' é inclusivo, ou seja, a proposição é verdadeira se pelo menos uma das partes for verdadeira.
+
+\section{Observações Finais}
+
+As operações apresentadas neste capítulo — negação, conjunção e disjunção — são a base para a construção de expressões lógicas mais complexas.
+
+Outras operações importantes, que serão estudadas posteriormente, incluem:
+\begin{itemize}
+    \item Disjunção exclusiva;
+    \item Condicional;
+    \item Bicondicional.
+\end{itemize}
+
+O domínio dessas operações é essencial para a compreensão de argumentos lógicos, provas matemáticas e aplicações em Ciência da Computação.
