@@ -75,6 +75,8 @@ Versão 1.1
   [https://github.com/bispojr/logica/blob/master/2026.1/aulas/03/main.pdf](https://github.com/bispojr/logica/blob/master/2026.1/aulas/03/main.pdf)
 - **Aula 04 (26/03):**  
   [https://github.com/bispojr/logica/blob/master/2026.1/aulas/04/main.pdf](https://github.com/bispojr/logica/blob/master/2026.1/aulas/04/main.pdf)
+- **Aula 05 (31/03):**  
+  [https://github.com/bispojr/logica/blob/master/2026.1/aulas/05/main.pdf](https://github.com/bispojr/logica/blob/master/2026.1/aulas/05/main.pdf)
 
 <!--
 ### Mini-Teste 2
