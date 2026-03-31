@@ -1,0 +1,172 @@
+\chapter{Operações Lógicas II}
+
+\begin{questao}{Questão 13}
+
+Sejam $p$ e $q$ duas proposições. Se $V(\sim p$ $\underline{\vee}$ $q) = V$, logo podemos afirmar que
+
+\begin{alternativas}
+\item $V(p) = F$
+\item $V(p) = V$
+\item $p$ e $q$ têm valorações iguais.
+\item Não é possível afirmar nada sobre a valoração das proposições.
+\end{alternativas}
+
+\end{questao}
+
+\begin{comentario_questao}
+
+\comentarioitem{A}{Para que $V(\sim p$ $\underline{\vee}$ $q) = V$, é necessário que exatamente uma das proposições $\sim p$ ou $q$ seja verdadeira. Isso não garante que $V(p) = F$, pois também pode ocorrer o caso em que $V(\sim p) = F$ e $V(q) = V$, ou seja, $V(p)$ pode ser $V$.}
+
+\comentarioitem{B}{Como visto, não é possível garantir que $V(p) = V$, pois existem casos em que $p$ pode ser falso e ainda assim a disjunção exclusiva ser verdadeira.}
+
+\comentarioitem{C}{Essa é alternativa correta. Para que $V(\sim p$ $\underline{\vee}$ $q) = V$, é necessário que exatamente uma das proposições $\sim p$ ou $q$ seja verdadeira. Isso implica que $\sim p$ e $q$ têm valorações opostas, ou seja, se $p$ é verdadeiro, então $q$ é verdadeiro também; e quando $p$ é falso, $q$ é falso. Portanto, $p$ e $q$ têm valorações iguais.}
+
+\comentarioitem{D}{Sim, é possível afirmar que $p$ e $q$ têm valorações iguais.}
+
+\respostacorreta{C}
+
+\end{comentario_questao}
+
+\newpage
+
+\begin{questao}{Questão 14}
+
+Sejam as proposições $p$: Está frio'' e $q$: Está chovendo''. Em linguagem natural, \\$\sim p$ $\rightarrow \sim q$ é traduzida como
+
+\begin{alternativas}
+\item Se não está calor então não está chovendo.
+\item Se não está frio então não está chovendo.
+\item É falso que se não está calor então não está chovendo.
+\item Não é verdade que se está frio então não está chovendo.
+\end{alternativas}
+
+\end{questao}
+
+\begin{comentario_questao}
+    \comentarioitem{A}{``Está calor'' não é necessariamente a negação de ``Está frio''. É possível que esteja nublado, por exemplo, o que não se encaixa em nenhuma das proposições. Portanto, essa alternativa não é correta.}
+
+    \comentarioitem{B}{Essa é a alternativa correta. A proposição $\sim p$ $\rightarrow \sim q$ é lida como ``Se não está frio, então não está chovendo''.}
+
+    \comentarioitem{C}{``Está calor'' não é necessariamente a negação de ``Está frio''. E a expressão ``É falso que'' negaria a expressão inteira, algo como $\sim (\ldots)$. Portanto, essa alternativa não é correta.}
+
+    \comentarioitem{D}{Essa é a negação da proposição inteira. Em notação simbólica seria $\sim (p$ $\rightarrow \sim q)$. Portanto, essa alternativa não é correta.}
+
+    \respostacorreta{B}
+\end{comentario_questao}
+
+\newpage
+
+\begin{questao}{Questão 15}
+
+Sejam $p$, $q$ e $r$ proposições quaisquer. Se $V(p \wedge q) = F$, logo podemos afirmar {\bf categoricamente} que
+
+\begin{alternativas}
+\item $V((p \wedge q) \rightarrow r) = V$
+\item $V(p \vee q) = F$
+\item $V(\sim p) = V$
+\item $V(r \rightarrow q) = F$
+\end{alternativas}
+
+\end{questao}
+
+\begin{comentario_questao}
+
+    \comentarioitem{A}{Essa é a alternativa correta. A proposição $p \wedge q$ é falsa, o que significa que $V(F \rightarrow r) = V$ para qualquer valor de $r$.}
+
+    \comentarioitem{B}{A proposição $p \vee q$ pode ser verdadeira ou falsa, dependendo dos valores de $p$ e $q$. Se ambos forem falsos, então $p \vee q$ será falso; se pelo menos um deles for verdadeiro, então $p \vee q$ será verdadeiro. Portanto, não podemos afirmar categoricamente que $V(p \vee q) = F$.}
+
+    \comentarioitem{C}{A proposição $\sim p$ pode ser verdadeira ou falsa, dependendo do valor de $p$. Se $p$ for verdadeiro, então $\sim p$ será falso; se $p$ for falso, então $\sim p$ será verdadeiro. Portanto, não podemos afirmar categoricamente que $V(\sim p) = V$.}
+
+    \comentarioitem{D}{A proposição $r \rightarrow q$ pode ser verdadeira ou falsa, dependendo dos valores de $r$ e $q$. Se $r$ for verdadeiro e $q$ for falso, então $r \rightarrow q$ será falso; caso contrário, será verdadeiro. Portanto, não podemos afirmar categoricamente que $V(r \rightarrow q) = F$.}
+
+    \respostacorreta{A}
+\end{comentario_questao}
+
+\newpage
+
+\begin{questao}{Questão 16}
+
+Sejam as proposições $p$: ``Jorge é rico'' e $q$: ``Carlos é feliz''. Em linguagem simbólica,
+
+``Jorge não é rico, se e somente se, Carlos for feliz''
+
+é expressa como
+
+\begin{alternativas}
+\item $\sim p \leftrightarrow q$
+\item $\sim p \leftrightarrow \sim q$
+\item $\sim p \leftarrow q$
+\item $\sim p \leftarrow \sim q$
+\end{alternativas}
+
+\end{questao}
+
+\begin{comentario_questao}
+
+    \comentarioitem{A}{Essa é a alternativa correta. A proposição ``Jorge não é rico, se e somente se, Carlos for feliz'' é expressa como $\sim p \leftrightarrow q$.}
+
+    \comentarioitem{B}{A proposição $\sim p \leftrightarrow \sim q$ seria lida como ``Jorge não é rico, se e somente se, Carlos não for feliz'', o que não corresponde à frase dada.}
+
+    \comentarioitem{C}{A proposição $\sim p \leftarrow q$ seria lida como ``Se Carlos for feliz, então Jorge não é rico'', o que não corresponde à frase dada.}
+
+    \comentarioitem{D}{A proposição $\sim p \leftarrow \sim q$ seria lida como ``Se Carlos não for feliz, então Jorge não é rico'', o que não corresponde à frase dada.}
+
+    \respostacorreta{A}
+\end{comentario_questao}
+
+\newpage
+
+\begin{questao}{Questão 17}
+
+Sejam $p$, $q$ e $r$ proposições quaisquer. Se $V(p \wedge q) = F$, logo podemos afirmar {\bf categoricamente} que
+
+\begin{alternativas}
+\item $V((p \wedge q) \leftrightarrow r) = V$
+\item $V(p \rightarrow q) = F$
+\item $V(r \leftrightarrow r) = V$
+\item $V(r \rightarrow (p \wedge q)) = F$
+\end{alternativas}
+
+\end{questao}
+
+\begin{comentario_questao}
+
+    \comentarioitem{A}{O valor de $(p \wedge q) \leftrightarrow r$ pode ser falso, no caso de $r$ ser verdadeiro, ou seja, $V((p \wedge q) \leftrightarrow r) = F$. Portanto, não podemos afirmar categoricamente que $V((p \wedge q) \leftrightarrow r) = V$.}
+
+    \comentarioitem{B}{A proposição $p \rightarrow q$ pode ser verdadeira ou falsa, dependendo dos valores de $p$ e $q$. Se $p$ for verdadeiro e $q$ for falso, então $p \rightarrow q$ será falso; caso contrário, será verdadeiro. Portanto, não podemos afirmar categoricamente que $V(p \rightarrow q) = F$.}
+
+    \comentarioitem{C}{A proposição $r \leftrightarrow r$ é uma tautologia, ou seja, é sempre verdadeira independentemente do valor de $r$. Portanto, essa alternativa é correta.}
+
+    \comentarioitem{D}{A proposição $r \rightarrow (p \wedge q)$ pode ser verdadeira ou falsa, dependendo dos valores de $r$, $p$ e $q$. 
+    \begin{itemize}
+        \item Se $r$ for verdadeiro, então $r \rightarrow (p \wedge q)$ será falso (pois $p \wedge q$ é falso);
+        \item Se $r$ for falso, então $r \rightarrow (p \wedge q)$ pode ser tanto verdadeiro quanto falso.
+    \end{itemize} }
+
+    \respostacorreta{C}
+\end{comentario_questao}
+
+\newpage
+
+\begin{questao}{Questão 18}
+
+Sejam $p$, $q$ e $r$ proposições quaisquer. Se $V(p$ $\underline{\vee}$ $q) = V$ e $V(r) = F$, logo podemos afirmar {\bf categoricamente} que
+
+\begin{alternativas}
+\item $V(p \leftrightarrow q) = V$
+\item $V\big((p \leftrightarrow q)$ $\underline{\vee}$ $r\big) = V$
+\item $V\big((p$ $\underline{\vee}$ $q) \leftrightarrow r\big) = F$
+\item $V\big(r \rightarrow (p$ $\underline{\vee}$ $q)\big) = F$
+\end{alternativas}
+
+\end{questao}
+
+\begin{comentario_questao}
+
+    A proposição ``12 é um número ímpar'' é falsa, pois 12 é um número par. Portanto, a negação dessa proposição, que é ``Não é verdade que 12 é um número ímpar'', é verdadeira.
+
+    \respostacorreta{A}
+
+\end{comentario_questao}
+
+\newpage
