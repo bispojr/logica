@@ -1,0 +1,194 @@
+\chapter{Operações Lógicas  II}
+
+As operações lógicas obedecem às regras do cálculo proposicional e são fundamentais para a construção e análise de proposições mais complexas.
+
+Entre as principais operações lógicas, destacam-se:
+\begin{itemize}
+    \item Negação;
+    \item Conjunção;
+    \item Disjunção;
+    \item Disjunção exclusiva;
+    \item Condicional;
+    \item Bicondicional.
+\end{itemize}
+
+Neste capítulo, aprofundaremos o estudo das operações de disjunção exclusiva, condicional e bicondicional.
+
+\section{Disjunção Exclusiva}
+
+\subsection{Definição}
+
+Chama-se de \textbf{disjunção exclusiva} de duas proposições $p$ e $q$ a proposição representada por ``ou $p$ ou $q$'', no sentido de que \textbf{exatamente uma} das proposições é verdadeira.
+
+\subsection{Notação}
+
+A disjunção exclusiva é representada por:
+\[
+p \ \underline{\vee} \ q
+\]
+
+\subsection{Tabela-Verdade}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$p$ & $q$ & $p \ \underline{\vee} \ q$ \\
+\hline
+V & V & F \\
+V & F & V \\
+F & V & V \\
+F & F & F \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Exemplo}
+
+Considere as proposições:
+\begin{itemize}
+    \item $p$: Rivaldo foi revelado no Santa Cruz. (V)
+    \item $q$: Neymar é melhor do que Cristiano Ronaldo. (F)
+\end{itemize}
+
+A proposição composta:
+\[
+p \ \underline{\vee} \ q
+\]
+pode ser lida como:
+
+\begin{quote}
+Ou Rivaldo foi revelado no Santa Cruz ou Neymar é melhor do que Cristiano Ronaldo.
+\end{quote}
+
+Como $p$ é verdadeiro e $q$ é falso, temos:
+\[
+V(p \ \underline{\vee} \ q) = V
+\]
+
+\section{Condicional}
+
+\subsection{Definição}
+
+Chama-se de \textbf{proposição condicional} (ou simplesmente \textbf{condicional}) a proposição representada por:
+
+\begin{quote}
+Se $p$ então $q$
+\end{quote}
+
+\subsection{Notação}
+
+\[
+p \rightarrow q
+\]
+
+\subsection{Tabela-Verdade}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$p$ & $q$ & $p \rightarrow q$ \\
+\hline
+V & V & V \\
+V & F & F \\
+F & V & V \\
+F & F & V \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Exemplo}
+
+Considere:
+\begin{itemize}
+    \item $p$: Rivaldo foi revelado no Santa Cruz. (V)
+    \item $q$: Neymar é melhor do que Cristiano Ronaldo. (F)
+\end{itemize}
+
+A proposição:
+\[
+p \rightarrow q
+\]
+é lida como:
+
+\begin{quote}
+Se Rivaldo foi revelado no Santa Cruz, então Neymar é melhor do que Cristiano Ronaldo.
+\end{quote}
+
+Nesse caso:
+\[
+V(p \rightarrow q) = F
+\]
+
+\subsection{Outras Formas de Leitura}
+
+A proposição $p \rightarrow q$ também pode ser interpretada como:
+\begin{itemize}
+    \item $p$ é condição suficiente para $q$;
+    \item $q$ é condição necessária para $p$.
+\end{itemize}
+
+\subsection{Observação Importante}
+
+A proposição $p \rightarrow q$ \textbf{não afirma} que $q$ pode ser deduzido de $p$. Trata-se apenas de uma relação lógica entre os valores de verdade das proposições.
+
+\section{Bicondicional}
+
+\subsection{Definição}
+
+Chama-se de \textbf{proposição bicondicional} (ou simplesmente \textbf{bicondicional}) a proposição representada por:
+
+\begin{quote}
+$p$ se e somente se $q$
+\end{quote}
+
+\subsection{Notação}
+
+\[
+p \leftrightarrow q
+\]
+
+\subsection{Tabela-Verdade}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$p$ & $q$ & $p \leftrightarrow q$ \\
+\hline
+V & V & V \\
+V & F & F \\
+F & V & F \\
+F & F & V \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Exemplo}
+
+Considere:
+\begin{itemize}
+    \item $p$: Rivaldo foi revelado no Santa Cruz. (V)
+    \item $q$: Neymar é melhor do que Cristiano Ronaldo. (F)
+\end{itemize}
+
+A proposição:
+\[
+p \leftrightarrow q
+\]
+é lida como:
+
+\begin{quote}
+Rivaldo foi revelado no Santa Cruz se e somente se Neymar é melhor do que Cristiano Ronaldo.
+\end{quote}
+
+Como os valores de $p$ e $q$ são diferentes, temos:
+\[
+V(p \leftrightarrow q) = F
+\]
+
+\subsection{Outras Formas de Leitura}
+
+A proposição bicondicional pode ser interpretada como:
+\begin{itemize}
+    \item $p$ é condição necessária e suficiente para $q$;
+    \item $q$ é condição necessária e suficiente para $p$.
+\end{itemize}
