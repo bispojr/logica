@@ -174,13 +174,16 @@ Os QR Codes individuais utilizados nas aulas de participação estão disponíve
 		<tr><td>Henrique Goulart Garcia de Castro</td><td align="center">13</td><td align="center">Henrique</td></tr>
 		<tr><td>Herik Fellipe Silva Segin</td><td align="center">14</td><td align="center">Herik</td></tr>
 		<tr><td>Igor Dias Pereira Santos</td><td align="center">15</td><td align="center">Igor</td></tr>
+		<tr><td>Isabella Lima</td><td align="center">51</td><td align="center">Isabella</td></tr>
+		<tr><td>João Henrique Costa</td><td align="center">53</td><td align="center">João Henrique</td></tr>
 		<tr><td>João Bernardes</td><td align="center">16</td><td align="center">JoãoBernades</td></tr>
 		<tr><td>João Gabriel Matozo Oliveira</td><td align="center">17</td><td align="center">JoãoGabriel</td></tr>
 		<tr><td>João Pedro Lopes da Silva Santos</td><td align="center">18</td><td align="center">JoãoPedSantos</td></tr>
 		<tr><td>João Pedro Naves Pereira</td><td align="center">19</td><td align="center">JoãoPedPereira</td></tr>
 		<tr><td>Juan Claro Rocha</td><td align="center">20</td><td align="center">Juan</td></tr>
 		<tr><td>Kaio Souza Costa</td><td align="center">21</td><td align="center">Kaio</td></tr>
-		<tr><td>Leonardo Dias Rezende</td><td align="center">23</td><td align="center">Leonardo</td></tr>
+		<tr><td>Leonardo Oliveira</td><td align="center">54</td><td align="center">LeoOliveira</td></tr>
+		<tr><td>Leonardo Dias Rezende</td><td align="center">23</td><td align="center">LeoRezende</td></tr>
 		<tr><td>Luana Roberta da Silva Dias</td><td align="center">24</td><td align="center">Luana</td></tr>
 		<tr><td>Lucas Eronildo de Alcântara Santos</td><td align="center">25</td><td align="center">LucSantos</td></tr>
 		<tr><td>Lucas Lopes Gomes</td><td align="center">26</td><td align="center">LucGomes</td></tr>
@@ -194,7 +197,7 @@ Os QR Codes individuais utilizados nas aulas de participação estão disponíve
 		<tr><td>Naabe Arruda Gomes</td><td align="center">34</td><td align="center">Naabe</td></tr>
 		<tr><td>Naam Pedro Borges da Silva</td><td align="center">35</td><td align="center">Naam</td></tr>
 		<tr><td>Nicolas Duarte de Souza Amante</td><td align="center">36</td><td align="center">Nicolas</td></tr>
-		<tr><td>Pedro Neves Marreto Pereira</td><td align="center">37</td><td align="center">Pedro</td></tr>
+		<tr><td>Pedro Neves Marreto Pereira</td><td align="center">52</td><td align="center">PedroNeves</td></tr>
 		<tr><td>Rafael Augusto de Almeida Marques</td><td align="center">38</td><td align="center">Rafael</td></tr>
 		<tr><td>Raisson Murilo Ferreira Silva</td><td align="center">39</td><td align="center">Raisson</td></tr>
 		<tr><td>Ronan Pereira da Silva</td><td align="center">40</td><td align="center">Ronan</td></tr>
@@ -206,8 +209,9 @@ Os QR Codes individuais utilizados nas aulas de participação estão disponíve
 		<tr><td>Vitor Gabriel Godoi Malaquias</td><td align="center">46</td><td align="center">VitGabriel</td></tr>
 		<tr><td>Vitor Hugo Santana de Queiroz Oliveira</td><td align="center">47</td><td align="center">VitHugo</td></tr>
 		<tr><td>Vitor Lopes da Mata</td><td align="center">48</td><td align="center">VitMata</td></tr>
-		<tr><td>Yudi Shihadeh Iwata de Freitas</td><td align="center">49</td><td align="center">Yudi</td></tr>
 		<tr><td>Vitorugo Ruthes Brito</td><td align="center">50</td><td align="center">VitorugoBrito</td></tr>
+		<tr><td>Willian Almeida</td><td align="center">55</td><td align="center">Willian</td></tr>
+		<tr><td>Yudi Shihadeh Iwata de Freitas</td><td align="center">49</td><td align="center">Yudi</td></tr>
 	</tbody>
 </table>
 
