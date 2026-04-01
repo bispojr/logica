@@ -163,10 +163,13 @@ Sejam $p$, $q$ e $r$ proposições quaisquer. Se $V(p$ $\underline{\vee}$ $q) = 
 
 \begin{comentario_questao}
 
-    A proposição ``12 é um número ímpar'' é falsa, pois 12 é um número par. Portanto, a negação dessa proposição, que é ``Não é verdade que 12 é um número ímpar'', é verdadeira.
+    \comentarioitem{A}{Se $V(p$ $\underline{\vee}$ $q) = V$, isso significa que exatamente uma das proposições $p$ ou $q$ é verdadeira. Portanto, $p$ e $q$ têm valorações opostas, o que implica que $V(p \leftrightarrow q) = F$. Portanto, não podemos afirmar categoricamente que $V(p \leftrightarrow q) = V$.}
 
-    \respostacorreta{A}
+    \comentarioitem{B}{ A proposição $(p \leftrightarrow q)$ é falsa, como visto na alternativa A. E a disjunção exclusiva de uma proposição falsa com uma proposição falsa ($r$) é falsa. Portanto, $V\big((p \leftrightarrow q)$ $\underline{\vee}$ $r\big) = F$. Portanto, não podemos afirmar categoricamente que $V\big((p \leftrightarrow q)$ $\underline{\vee}$ $r\big) = V$.}   
 
-\end{comentario_questao}
+    \comentarioitem{C}{A proposição $(p$ $\underline{\vee}$ $q) \leftrightarrow r$ é falsa, pois $V(p$ $\underline{\vee}$ $q) = V$ e $V(r) = F$. Portanto, podemos afirmar categoricamente que $V\big((p$ $\underline{\vee}$ $q) \leftrightarrow r\big) = F$.}
 
-\newpage
+    \comentarioitem{D}{A proposição $r \rightarrow (p$ $\underline{\vee}$ $q)$ é verdadeira, pois $V(r) = F$. Portanto, $V\big(r \rightarrow (p$ $\underline{\vee}$ $q)\big) = V$. Portanto, está incorreta a afirmação de que $V\big(r \rightarrow (p$ $\underline{\vee}$ $q)\big) = F$.}
+
+    \respostacorreta{C}
+\end{comentario_questao}    
