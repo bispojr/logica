@@ -5,7 +5,6 @@
 [![UFJ](https://img.shields.io/badge/UFJ-Universidade%20Federal%20de%20Jataí-blue?style=flat-square)](https://www.ufj.edu.br)
 [![Curso](https://img.shields.io/badge/Curso-Ciência%20da%20Computação-green?style=flat-square)](#)
 [![Semestre](https://img.shields.io/badge/Semestre-2026.1-orange?style=flat-square)](#)
-[![Versão](https://img.shields.io/badge/Versão-1.1-lightgrey?style=flat-square)](#)
 
 **Lógica para Ciência da Computação (LCC)**  
 Prof. Esdras Lins Bispo Jr.
