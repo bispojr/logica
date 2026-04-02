@@ -133,7 +133,7 @@ A partir da **página 193** do livro de referência **[L1]**.
 | Aula 03 | 24/03 | [📥 Baixar PDF](https://github.com/bispojr/logica/blob/master/2026.1/aulas/03/main.pdf) |
 | Aula 04 | 26/03 | [📥 Baixar PDF](https://github.com/bispojr/logica/blob/master/2026.1/aulas/04/main.pdf) |
 | Aula 05 | 31/03 | [📥 Baixar PDF](https://github.com/bispojr/logica/blob/master/2026.1/aulas/05/main.pdf) |
-| Aula 05 | 06/04 | [📥 Baixar PDF](https://github.com/bispojr/logica/blob/master/2026.1/aulas/06/main.pdf) |
+| Aula 06 | 06/04 | [📥 Baixar PDF](https://github.com/bispojr/logica/blob/master/2026.1/aulas/06/main.pdf) |
 
 <!--
 ### 🟡 Teste 2
