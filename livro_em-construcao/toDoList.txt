@@ -1,2 +1,0 @@
-Mudar as informações da página 2
-Fatorar o livro para poder dividir em capítulos
