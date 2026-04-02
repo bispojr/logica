@@ -44,7 +44,7 @@ Prof. Esdras Lins Bispo Jr.
 
 ## 🔍 Estudos Prévios
 
-### 🔵 Teste 1
+### 🔵 Módulo 1
 
 | Aula | Data | Leitura |
 |------|------|---------|
@@ -82,7 +82,7 @@ Prof. Esdras Lins Bispo Jr.
 
 ## ✏️ Listas de Exercícios
 
-### 🔵 Teste 1
+### 🔵 Módulo 1
 
 > **Lista 01:** 1.1 (a-h), 2.1, 2.5, 2.8, 2.12 (a,d,f,g), 2.18, 2.19, 2.20, 3.1 (b,e,h), 3.2 (a,d), 3.3 (b,e), 3.4 (d), 3.5 (d), 3.12 (b,d), 3.13, 3.15 — **[L1]**
 
@@ -100,9 +100,33 @@ A partir da **página 193** do livro de referência **[L1]**.
 
 ---
 
+## 🎯 Competências
+
+| Módulo | Código | Descrição |
+|------|------|------|
+|1| C1.1| Conversão da linguagem simbólica para a natural.|
+|1| C1.2| Conversão da linguagem natural para simbólica. |
+|1| C1.3| Construção de Tabelas-Verdade. |
+
+**Critérios:**
+
+- **C1.1**
+	- Compreensão do Enunciado
+	- Leitura da Linguagem Simbólica
+	- Escrita da Linguagem Natural
+- **C1.2**
+	- Compreensão do Enunciado
+	- Leitura da Linguagem Natural
+	- Escrita em Linguagem Simbólica
+- **C1.3**
+	- Apresentação da Tabela-Verdade
+	- Estruturação das Valorações
+	- Ordem de Precedência
+	- Semântica dos Conectivos
+
 ## 🖥️ Slides
 
-### 🔵 Teste 1
+### 🔵 Módulo 1
 
 | Aula | Data | Link |
 |------|------|------|
