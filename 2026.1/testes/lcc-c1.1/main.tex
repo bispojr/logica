@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This project aims to create a test template or exercise list from the        %%     
+%% Federal University of Ceará (UFC).                                           %%
+%% author: Maurício Moreira Neto - Doctoral student in Computer Science         %%
+%% contacts:                                                                    %%
+%%    e-mail: maumneto@ufc.br                                                   %%
+%%    linktree:  https://linktr.ee/maumneto                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{ufcdocument}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amssymb}
+
+\begin{document}
+
+       %% Informations that will be insert in the table header 
+\def\course{Lógica para Ciência da Computação}
+\def\prof{Esdras Lins Bispo Jr.}
+\def\semester{2026.1}
+\def\codeCourse{ICE0239}
+\def\registration{}
+\def\student{}
+\def\graduate{Bacharelado em Ciência da Computação}
+\def\theme{Avaliação da Competência LCC-C1.1(a):\\ \texttt{Conversão da linguagem simbólica para a natural.}
+}
+    %% Table with the header
+    \makeheader
+    
+    %% Space for the instructions
+    % \fbox{
+    %     \parbox{\textwidth}{
+    %         \begin{minipage}{\textwidth}
+    %             \makeinstructions
+    %             {
+    %                 \begin{instlist}
+    %                     \item A avaliação é individual e não é pesquisada.
+    %                     \item Preencha o cabeçalho da folha pergunta com seus dados.
+    %                     \item  Todas as folhas respostas devem conter o nome a a matrícula do aluno.
+    %                     \item O preenchimento das respostas deve ser feito utilizando caneta (preta ou azul).
+    %                 \end{instlist}
+    %             }
+    %         \end{minipage}
+    %     }
+    % }
+    %% Space between the instructions and the questions.
+    \vspace{0.5cm}
+    
+    \begin{question}
+        \item Sejam as proposições $x$: ``A estudante cursa programação introdutória'', e $z$: ``A estudante consegue programar utilizando funções''. Traduza  a proposição $\sim (z$ $\leftrightarrow$ $\sim x)$ para a linguagem natural.
+    \end{question}
+ 
+    \vfill
+
+    \begin{center}
+    {\small
+    \setlength{\tabcolsep}{10pt}
+    \renewcommand{\arraystretch}{2}
+    \begin{tabular}{|p{0.47\textwidth}|c|c|}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Rubrica --- C1.1: Conversão da linguagem simbólica para a natural}} \\
+    \hline
+    \textbf{Critérios} & \textbf{Em formação} & \textbf{Proficiente} \\
+    \hline
+    Compreensão do Enunciado & $\square$ & $\square$ \\
+    \hline
+    Leitura da Linguagem Simbólica & $\square$ & $\square$ \\
+    \hline
+    Escrita da Linguagem Natural & $\square$ & $\square$ \\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+
+\end{document}
