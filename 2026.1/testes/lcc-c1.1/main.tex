@@ -11,6 +11,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
 \usepackage{amssymb}
+\usepackage{booktabs}
 
 \begin{document}
 
@@ -56,18 +57,16 @@
     {\small
     \setlength{\tabcolsep}{10pt}
     \renewcommand{\arraystretch}{2}
-    \begin{tabular}{|p{0.47\textwidth}|c|c|}
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Rubrica --- C1.1: Conversão da linguagem simbólica para a natural}} \\
-    \hline
+    \begin{tabular}{p{0.47\textwidth}cc}
+    \toprule
+    \multicolumn{3}{c}{\textbf{Rubrica --- C1.1: Conversão da linguagem simbólica para a natural}} \\
+    \midrule
     \textbf{Critérios} & \textbf{Em formação} & \textbf{Proficiente} \\
-    \hline
+    \midrule
     Compreensão do Enunciado & $\square$ & $\square$ \\
-    \hline
     Leitura da Linguagem Simbólica & $\square$ & $\square$ \\
-    \hline
     Escrita da Linguagem Natural & $\square$ & $\square$ \\
-    \hline
+    \bottomrule
     \end{tabular}
     }
     \end{center}
