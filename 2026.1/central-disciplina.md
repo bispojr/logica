@@ -88,10 +88,10 @@ Prof. Esdras Lins Bispo Jr.
 > **Lista 01:** 1.1 (a-h), 2.1, 2.5, 2.8, 2.12 (a,d,f,g), 2.18, 2.19, 2.20, 3.1 (b,e,h), 3.2 (a,d), 3.3 (b,e), 3.4 (d), 3.5 (d), 3.12 (b,d), 3.13, 3.15 — **[L1]**
 
 <!--
-### 🟡 Teste 2
+### 🟡 Módulo 2
 > **Lista 02:** 4.2, 4.4, 5.2, 5.4, 5.5, 6.3 (a,d), 6.4, 6.7 (b), 6.8 (a,c), 6.9 — **[L1]**
 
-### 🟠 Teste 3
+### 🟠 Módulo 3
 > **Lista 03:** 9.3, 9.4 (c), 9.5 (c), 9.6 (c), 9.7 (c), 9.8 (c), 9.9 (c) — **[L1]**
 -->
 
@@ -108,11 +108,11 @@ A partir da **página 193** do livro de referência **[L1]**.
 
 Aqui você encontra os testes aplicados na disciplina, em formato PDF, para consulta e revisão. Clique no nome para baixar ou visualizar:
 
-| Teste | Competência | PDF |
-|-------|-------------|-----|
-| 🟦 Teste C1.1 | Conversão da linguagem simbólica para a natural | [📥 Baixar PDF](./testes/lcc-c1.1/main.pdf) |
-| 🟩 Teste C1.2 | Conversão da linguagem natural para simbólica | [📥 Baixar PDF](./testes/lcc-c1.2/main.pdf) |
-| 🟧 Teste C1.3 | Construção de Tabelas-Verdade | [📥 Baixar PDF](./testes/lcc-c1.3/main.pdf) |
+| Teste | Data | PDF |
+|-------|------|-----|
+| 🟦 Teste C1.1 | 07/04 | [📥 Baixar PDF](./testes/lcc-c1.1/main.pdf) |
+| 🟩 Teste C1.2 | 07/04 | [📥 Baixar PDF](./testes/lcc-c1.2/main.pdf) |
+| 🟧 Teste C1.3 | 07/04 | [📥 Baixar PDF](./testes/lcc-c1.3/main.pdf) |
 
 ---
 
@@ -150,28 +150,6 @@ Aqui você encontra os testes aplicados na disciplina, em formato PDF, para cons
 | Aula 04 | 26/03 | [📥 Baixar PDF](https://github.com/bispojr/logica/blob/master/2026.1/aulas/04/main.pdf) |
 | Aula 05 | 31/03 | [📥 Baixar PDF](https://github.com/bispojr/logica/blob/master/2026.1/aulas/05/main.pdf) |
 | Aula 06 | 06/04 | [📥 Baixar PDF](https://github.com/bispojr/logica/blob/master/2026.1/aulas/06/main.pdf) |
-
-<!--
-### 🟡 Teste 2
-| Aula | Data | Link |
-|------|------|------|
-| Aula 10 | 15/04 | [📥 Abrir no Overleaf](https://www.overleaf.com/read/bvdwdsnhbgbf#0d1c90) |
-| Aula 11 | 17/04 | [📥 Abrir no Overleaf](https://www.overleaf.com/read/cvnpfpzgjvqq#2ebb86) |
-| Aula 12 | 22/04 | [📥 Abrir no Overleaf](https://www.overleaf.com/read/nccfrhdcmsrf#1f9b79) |
-
-### 🟠 Teste 3
-| Aula | Data | Link |
-|------|------|------|
-| Aula 17 | 15/05 | [📥 Abrir no Overleaf](https://www.overleaf.com/read/qfmrvjhnkbyc#f9e2c3) |
--->
-
-<!--
-## 📝 Mini-Testes
-| Avaliação | Data | Link |
-|-----------|------|------|
-| Mini-Teste 1 (com resolução) | 01/04 | [📥 Abrir no Overleaf](https://www.overleaf.com/read/rqjtdkvcryyx#a01420) |
-| Mini-Teste 1-2 (com resolução) | 06/05 | [📥 Abrir no Overleaf](https://www.overleaf.com/read/mwkhsmghgxkv#048849) |
--->
 
 ---
 
