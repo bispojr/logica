@@ -21,6 +21,7 @@ Prof. Esdras Lins Bispo Jr.
 | 📖 | [Livro de Referência](#-livro-de-referência) |
 | 🔍 | [Estudos Prévios](#-estudos-prévios) |
 | ✏️ | [Listas de Exercícios](#-listas-de-exercícios) |
+| 📝 | [Testes](#-testes) |
 | 🖥️ | [Slides](#-slides) |
 | 📲 | [Plickers](#-plickers) |
 
@@ -97,6 +98,21 @@ Prof. Esdras Lins Bispo Jr.
 ### 💡 Respostas dos Exercícios
 
 A partir da **página 193** do livro de referência **[L1]**.
+
+---
+
+
+## 📝 Testes
+
+### 📄 Avaliações Disponíveis
+
+Aqui você encontra os testes aplicados na disciplina, em formato PDF, para consulta e revisão. Clique no nome para baixar ou visualizar:
+
+| Teste | Competência | PDF |
+|-------|-------------|-----|
+| 🟦 Teste C1.1 | Conversão da linguagem simbólica para a natural | [📥 Baixar PDF](./testes/lcc-c1.1/main.pdf) |
+| 🟩 Teste C1.2 | Conversão da linguagem natural para simbólica | [📥 Baixar PDF](./testes/lcc-c1.2/main.pdf) |
+| 🟧 Teste C1.3 | Construção de Tabelas-Verdade | [📥 Baixar PDF](./testes/lcc-c1.3/main.pdf) |
 
 ---
 
