@@ -54,6 +54,29 @@
 			$(\sim r \leftrightarrow p$ $\vee$ $q$) $\rightarrow$ $\sim q$
 		\end{center}
     \end{question}
+{
+    \color{blue} {\bf Resposta:}
+    \begin{center}
+        \vspace{0.5cm}
+        % Tabela-verdade para (\sim r \leftrightarrow p \vee q) \rightarrow \sim q
+        \begin{tabular}{c|c|c||c|c|c|c||c|c}
+            & & & & & (1) & (2) & (3) & \\
+            \hline
+            $p$ & $q$ & $r$ & $\sim r$ & $p \vee q$ & $\sim r \leftrightarrow (p \vee q)$ & $\sim q$ & (1) $\rightarrow$ (2) &
+            \\
+            \hline
+            V & V & V & F & V & F & F & V \\
+            V & V & F & V & V & V & F & F \\
+            V & F & V & F & V & F & V & V \\
+            V & F & F & V & V & V & V & V \\
+            F & V & V & F & V & F & F & V \\
+            F & V & F & V & V & V & F & F \\
+            F & F & V & F & F & V & V & V \\
+            F & F & F & V & F & F & V & V \\
+            \hline
+        \end{tabular}
+    \end{center}
+}
  
     \vfill
 
