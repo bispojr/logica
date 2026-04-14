@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This project aims to create a test template or exercise list from the        %%     
+%% Federal University of Ceará (UFC).                                           %%
+%% author: Maurício Moreira Neto - Doctoral student in Computer Science         %%
+%% contacts:                                                                    %%
+%%    e-mail: maumneto@ufc.br                                                   %%
+%%    linktree:  https://linktr.ee/maumneto                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{ufcdocument}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+
+\begin{document}
+
+       %% Informations that will be insert in the table header 
+\def\course{Lógica para Ciência da Computação}
+\def\prof{Esdras Lins Bispo Jr.}
+\def\semester{2026.1}
+\def\codeCourse{ICE0239}
+\def\registration{}
+\def\student{}
+\def\graduate{Bacharelado em Ciência da Computação}
+\def\theme{Avaliação da Competência LCC C1.1:\\ \texttt{Conversão da linguagem simbólica para a natural.}\\
+09 de abril de 2026
+}
+    %% Table with the header
+    \makeheader
+    
+    %% Space for the instructions
+    % \fbox{
+    %     \parbox{\textwidth}{
+    %         \begin{minipage}{\textwidth}
+    %             \makeinstructions
+    %             {
+    %                 \begin{instlist}
+    %                     \item A avaliação é individual e não é pesquisada.
+    %                     \item Preencha o cabeçalho da folha pergunta com seus dados.
+    %                     \item  Todas as folhas respostas devem conter o nome a a matrícula do aluno.
+    %                     \item O preenchimento das respostas deve ser feito utilizando caneta (preta ou azul).
+    %                 \end{instlist}
+    %             }
+    %         \end{minipage}
+    %     }
+    % }
+    %% Space between the instructions and the questions.
+    \vspace{0.5cm}
+    
+    
+
+        \begin{question}
+            \item Sejam as proposições $p$: ``A estudante entregou o trabalho no prazo'', e $q$: ``A estudante participou da revisão em grupo''. Traduza a proposição $\sim (p \rightarrow (q$ $\vee \sim p))$ para a linguagem natural.
+        \end{question}
+
+    \vspace{0.3cm}
+        
+    {\color{blue} {\bf Resposta:} Não é verdade que, se a estudante entregou o trabalho no prazo, então ela participou da revisão em grupo ou não entregou o trabalho no prazo.}
+ 
+    \vfill
+
+    \begin{center}
+    {\small
+    \setlength{\tabcolsep}{10pt}
+    \renewcommand{\arraystretch}{2}
+    \definecolor{LightGray}{gray}{0.92}
+    \begin{tabular}{p{0.47\textwidth}cc}
+    \toprule
+    \addlinespace[2pt]
+    \rowcolor{black}
+    \multicolumn{3}{c}{\sffamily\fontsize{12pt}{14pt}\selectfont\textcolor{white}{Rubrica C1.1: Conversão da linguagem simbólica para a natural}} \\
+    \addlinespace[2pt]
+    \cmidrule(lr){1-3}
+    \midrule
+    \textbf{Critérios} & \textbf{Em formação} & \textbf{Proficiente} \\
+    \midrule
+    \rowcolor{LightGray} Compreensão do Enunciado & $\square$ & $\square$ \\
+    Leitura da Linguagem Simbólica & $\square$ & $\square$ \\
+    \rowcolor{LightGray} Escrita da Linguagem Natural & $\square$ & $\square$ \\
+    \bottomrule
+    \end{tabular}
+    }
+    \end{center}
+
+\end{document}

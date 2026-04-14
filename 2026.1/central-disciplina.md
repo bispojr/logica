@@ -108,11 +108,12 @@ A partir da **página 193** do livro de referência **[L1]**.
 
 Aqui você encontra os testes aplicados na disciplina, em formato PDF, para consulta e revisão. Clique no nome para baixar ou visualizar:
 
-| Teste | Data | PDF |
-|-------|------|-----|
-| 🟦 Teste C1.1 | 07/04 | [📥 Baixar PDF](./testes/lcc-c1.1/main.pdf) |
-| 🟩 Teste C1.2 | 07/04 | [📥 Baixar PDF](./testes/lcc-c1.2/main.pdf) |
-| 🟧 Teste C1.3 | 07/04 | [📥 Baixar PDF](./testes/lcc-c1.3/main.pdf) |
+| Teste         | Ciclo | Data   | PDF                                               |
+|---------------|-------|--------|---------------------------------------------------|
+| 🟦 Teste C1.1 | 1     | 07/04  | [📥 Baixar PDF](./testes/lcc-c1.1/ciclo-1/main.pdf)       |
+| 🟦 Teste C1.1 | 2     | 09/04  | [📥 Baixar PDF](./testes/lcc-c1.1/ciclo-2/main.pdf)|
+| 🟩 Teste C1.2 | 1     | 07/04  | [📥 Baixar PDF](./testes/lcc-c1.2/main.pdf)       |
+| 🟧 Teste C1.3 | 1     | 07/04  | [📥 Baixar PDF](./testes/lcc-c1.3/main.pdf)       |
 
 ---
 
