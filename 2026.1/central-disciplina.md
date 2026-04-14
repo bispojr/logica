@@ -18,6 +18,7 @@ Prof. Esdras Lins Bispo Jr.
 | | Seção |
 |--|-------|
 | 📄 | [Plano de Ensino](#-plano-de-ensino) |
+| 📋 | [Documentos](#-documentos) |
 | 📖 | [Livro de Referência](#-livro-de-referência) |
 | 🔍 | [Estudos Prévios](#-estudos-prévios) |
 | ✏️ | [Listas de Exercícios](#-listas-de-exercícios) |
@@ -32,6 +33,27 @@ Prof. Esdras Lins Bispo Jr.
 > Documento oficial com objetivos, cronograma, critérios de avaliação e bibliografia da disciplina.
 
 📎 [Baixar Plano de Ensino (PDF)](https://github.com/bispojr/logica/blob/master/2026.1/documentos/plano_ensino_logica_2026_1_assinado.pdf)
+
+---
+
+## 📋 Documentos
+
+### 📚 O Descomprometimento com a Própria Aprendizagem
+
+> Fundamentação teórica e critérios práticos para a identificação do descomprometimento acadêmico na disciplina, integrando as diretrizes do curso com a literatura sobre avaliação formativa e regimes pedagógicos.
+
+📎 [Acessar documento principal](https://github.com/bispojr/logica/blob/main/2026.1/documentos/descomprometimento-aprendizagem/main.md) | [Acessar documento complementar](https://github.com/bispojr/logica/blob/main/2026.1/documentos/descomprometimento-aprendizagem/doc-complementar.md)
+
+**Tópicos abordados:**
+
+| # | Seção |
+|---|-------|
+| 1️⃣ | Justificativa Pedagógica |
+| 2️⃣ | Alinhamento com a Proposta da Disciplina |
+| 3️⃣ | Indicadores de Descomprometimento (Assiduidade, Participação, Evolução) |
+| ⚠️ | Consequência Educacional (Reprovação Direta — Nota Final 4,0) |
+| 4️⃣ | Sistema de Monitoramento do Engajamento |
+| 🔵🟡🔴 | Semáforo Formativo (Azul / Amarelo / Vermelho) |
 
 ---
 
@@ -112,6 +134,7 @@ Aqui você encontra os testes aplicados na disciplina, em formato PDF, para cons
 |---------------|-------|--------|---------------------------------------------------|
 | 🟦 Teste C1.1 | 1     | 07/04  | [📥 Baixar PDF](./testes/lcc-c1.1/ciclo-1/main.pdf)       |
 | 🟦 Teste C1.1 | 2     | 09/04  | [📥 Baixar PDF](./testes/lcc-c1.1/ciclo-2/main.pdf)|
+| 🟦 Teste C1.1 | 3     | 14/04  | (a incluir)|
 | 🟩 Teste C1.2 | 1     | 07/04  | [📥 Baixar PDF](./testes/lcc-c1.2/main.pdf)       |
 | 🟧 Teste C1.3 | 1     | 07/04  | [📥 Baixar PDF](./testes/lcc-c1.3/main.pdf)       |
 
