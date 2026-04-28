@@ -116,6 +116,54 @@ Datas explícitas a seguir
 
 ---
 
+## 📝 5. Ausência em Avaliações Escritas por Competência
+
+**Dimensão:** Evidência de Aprendizagem  
+
+**Definição do Evento:**  
+Não realização (ausência) em uma avaliação escrita associada a uma mesma competência.
+
+---
+
+### 🔍 Subcaso A — Acúmulo de Ausências (sem intervenção prévia)
+
+**Unidade de Contagem:**  
+Faltas em avaliações por competência
+
+**Janela Temporal:**  
+Mesmo ciclo de oferta da competência
+
+| Nível | Critério |
+|------|--------|
+| 🔵 Azul | 2 faltas em avaliações escritas da mesma competência |
+
+**Interpretação:**
+- Caracteriza surgimento de *dados suspensos* (dangling data)
+
+---
+
+### 🔍 Subcaso B — Falta após Intervenção (Ciclo 3 com sinalização prévia)
+
+**Definição adicional do evento:**  
+Ausência em avaliação escrita de ciclo 3 **após comunicação formal** (e-mail) indicando necessidade de evolução naquela competência.
+
+**Unidade de Contagem:**  
+Ocorrência por competência sinalizada
+
+**Janela Temporal:**  
+Do momento da notificação até o ciclo 3
+
+| Nível | Critério |
+|------|--------|
+| 🟡 Amarelo | 1 falta em avaliação de ciclo 3 após notificação formal |
+| 🔴 Vermelho | Reincidência (nova ausência após nova oportunidade) **ou** manutenção da ausência de evidência |
+
+**Observações:**
+- Não há 🔵 Azul neste caso, pois já houve intervenção explícita
+- O 🟡 Amarelo já representa quebra de contrato após alerta direto
+
+---
+
 ## 🔁 Regras Gerais de Progressão
 
 Para todas as instâncias:
