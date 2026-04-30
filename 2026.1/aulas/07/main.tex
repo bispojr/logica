@@ -1,0 +1,191 @@
+\documentclass[xcolor=dvipsnames,table]{beamer}
+
+\usepackage{latexsym}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+\usepackage{enumitem}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  \definecolor{colortexto}{RGB}{0,0,0}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+  \setbeamercolor{normal text}{fg=colortexto} 
+  \usetheme{Warsaw}
+}
+
+\title{Resolução de Avaliação com Tabela-Verdade}  
+
+\author{
+  Esdras Lins Bispo Jr.\\ \url{bispojr@ufj.edu.br}
+} 
+
+\institute{
+  Lógica para Ciência da Computação
+  \\Bacharelado em Ciência da Computação (BCC)
+}
+
+\date{\textbf{28 de abril de 2026}}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Problema}
+
+\begin{frame}{Proposição}
+\begin{block}{Exercício}
+\[
+(\sim r \leftrightarrow (p \vee q)) \rightarrow \sim q
+\]
+\end{block}
+\pause
+\begin{block}{Estratégia}
+Construir a tabela passo a passo.
+\end{block}
+\end{frame}
+
+\section{Construção}
+
+%==================================================
+\begin{frame}{Passo 1: Estrutura inicial}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$p$ & $q$ & $r$ & $\sim r$ & $p \vee q$ & $\sim r \leftrightarrow (p \vee q)$ & $\sim q$ & (1)$\rightarrow$(2) \\
+\hline
+\onslide<2->{V} & \onslide<3->{V} & \onslide<4->{V} & & & & & \\
+\onslide<2->{V} & \onslide<3->{V} & \onslide<4->{F} & & & & & \\
+\onslide<2->{V} & \onslide<3->{F} & \onslide<4->{V} & & & & & \\
+\onslide<2->{V} & \onslide<3->{F} & \onslide<4->{F} & & & & & \\
+\onslide<2->{F} & \onslide<3->{V} & \onslide<4->{V} & & & & & \\
+\onslide<2->{F} & \onslide<3->{V} & \onslide<4->{F} & & & & & \\
+\onslide<2->{F} & \onslide<3->{F} & \onslide<4->{V} & & & & & \\
+\onslide<2->{F} & \onslide<3->{F} & \onslide<4->{F} & & & & & \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+%==================================================
+\begin{frame}{Passo 2: Coluna $\sim r$}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$p$ & $q$ & $r$ & $\sim r$ & $p \vee q$ & $\sim r \leftrightarrow (p \vee q)$ & $\sim q$ & (1)$\rightarrow$(2) \\
+\hline
+V & V & V & \onslide<2->{F} & & & & \\
+V & V & F & \onslide<2->{V} & & & & \\
+V & F & V & \onslide<2->{F} & & & & \\
+V & F & F & \onslide<2->{V} & & & & \\
+F & V & V & \onslide<2->{F} & & & & \\
+F & V & F & \onslide<2->{V} & & & & \\
+F & F & V & \onslide<2->{F} & & & & \\
+F & F & F & \onslide<2->{V} & & & & \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+%==================================================
+\begin{frame}{Passo 3: Coluna $p \vee q$}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$p$ & $q$ & $r$ & $\sim r$ & $p \vee q$ & $\sim r \leftrightarrow (p \vee q)$ & $\sim q$ & (1)$\rightarrow$(2) \\
+\hline
+V & V & V & F & \onslide<2->{V} & & & \\
+V & V & F & V & \onslide<2->{V} & & & \\
+V & F & V & F & \onslide<2->{V} & & & \\
+V & F & F & V & \onslide<2->{V} & & & \\
+F & V & V & F & \onslide<2->{V} & & & \\
+F & V & F & V & \onslide<2->{V} & & & \\
+F & F & V & F & \onslide<2->{F} & & & \\
+F & F & F & V & \onslide<2->{F} & & & \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+%==================================================
+\begin{frame}{Passo 4: Coluna (1)}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$p$ & $q$ & $r$ & $\sim r$ & $p \vee q$ & $\sim r \leftrightarrow (p \vee q)$ & $\sim q$ & (1)$\rightarrow$(2) \\
+\hline
+V & V & V & F & V & \onslide<2->{F} & & \\
+V & V & F & V & V & \onslide<2->{V} & & \\
+V & F & V & F & V & \onslide<2->{F} & & \\
+V & F & F & V & V & \onslide<2->{V} & & \\
+F & V & V & F & V & \onslide<2->{F} & & \\
+F & V & F & V & V & \onslide<2->{V} & & \\
+F & F & V & F & F & \onslide<2->{V} & & \\
+F & F & F & V & F & \onslide<2->{F} & & \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+%==================================================
+\begin{frame}{Passo 5: Coluna (2)}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$p$ & $q$ & $r$ & $\sim r$ & $p \vee q$ & $\sim r \leftrightarrow (p \vee q)$ & $\sim q$ & (1)$\rightarrow$(2) \\
+\hline
+V & V & V & F & V & F & \onslide<2->{F} & \\
+V & V & F & V & V & V & \onslide<2->{F} & \\
+V & F & V & F & V & F & \onslide<2->{V} & \\
+V & F & F & V & V & V & \onslide<2->{V} & \\
+F & V & V & F & V & F & \onslide<2->{F} & \\
+F & V & F & V & V & V & \onslide<2->{F} & \\
+F & F & V & F & F & V & \onslide<2->{V} & \\
+F & F & F & V & F & F & \onslide<2->{V} & \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+%==================================================
+\begin{frame}{Passo 6: Coluna Final (3)}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$p$ & $q$ & $r$ & $\sim r$ & $p \vee q$ & $\sim r \leftrightarrow (p \vee q)$ & $\sim q$ & (1)$\rightarrow$(2) \\
+\hline
+V & V & V & F & V & F & F & \onslide<2->{V} \\
+V & V & F & V & V & V & F & \onslide<2->{F} \\
+V & F & V & F & V & F & V & \onslide<2->{V} \\
+V & F & F & V & V & V & V & \onslide<2->{V} \\
+F & V & V & F & V & F & F & \onslide<2->{V} \\
+F & V & F & V & V & V & F & \onslide<2->{F} \\
+F & F & V & F & F & V & V & \onslide<2->{V} \\
+F & F & F & V & F & F & V & \onslide<2->{V} \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\end{document}
