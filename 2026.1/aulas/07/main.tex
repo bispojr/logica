@@ -16,7 +16,7 @@
 \usepackage{algorithm}
 \usepackage{acronym}
 \usepackage{array}
-\usepackage{enumitem}
+\usepackage{booktabs}
 
 \newtheorem{definicao}{Definio}
 \newcommand{\tab}{\hspace*{2em}}
@@ -47,6 +47,13 @@
 \begin{frame}
 \titlepage
 \end{frame}
+
+\AtBeginSection{
+		\begin{frame}{Sumário}%[allowframebreaks]{Sumário}
+    		\tableofcontents[currentsection]
+    		%\tableofcontents[currentsection, hideothersubsections]
+		\end{frame}
+	}
 
 \section{Problema}
 
@@ -180,6 +187,170 @@ F & V & V & F & V & F & F & \onslide<2->{V} \\
 F & V & F & V & V & V & F & \onslide<2->{F} \\
 F & F & V & F & F & V & V & \onslide<2->{V} \\
 F & F & F & V & F & F & V & \onslide<2->{V} \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+\section{Exercício de Fixação}
+
+\begin{frame}{Proposição}
+\begin{block}{Exercício}
+\[
+(\sim t \leftrightarrow x \rightarrow y)\mbox{ }\vee \sim y
+\]
+\end{block}
+
+\pause
+
+\begin{block}{Objetivo}
+Construir a tabela-verdade considerando corretamente a precedência.
+\end{block}
+\end{frame}
+
+%==================================================
+
+\begin{frame}{Passo 1: Ordem de precedência}
+\begin{block}{Regra}
+\begin{enumerate}
+\item $\sim$
+\item $\wedge$, $\vee$
+\item $\rightarrow$
+\item $\leftrightarrow$
+\end{enumerate}
+\end{block}
+
+\pause
+
+\begin{block}{Decisão importante}
+\[
+\sim t \leftrightarrow x \rightarrow y
+\]
+\pause
+
+é interpretado como:
+\[
+\sim t \leftrightarrow (x \rightarrow y)
+\]
+\end{block}
+\end{frame}
+
+%==================================================
+
+\begin{frame}{Passo 2: Estrutura}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$x$ & $y$ & $t$ & $\sim t$ & $x \rightarrow y$ & $\sim t \leftrightarrow (x \rightarrow y)$ & $\sim y$ & (1) $\vee$ (2) \\
+\hline
+\onslide<2->{V} & \onslide<3->{V} & \onslide<4->{V} & & & & & \\
+\onslide<2->{V} & \onslide<3->{V} & \onslide<4->{F} & & & & & \\
+\onslide<2->{V} & \onslide<3->{F} & \onslide<4->{V} & & & & & \\
+\onslide<2->{V} & \onslide<3->{F} & \onslide<4->{F} & & & & & \\
+\onslide<2->{F} & \onslide<3->{V} & \onslide<4->{V} & & & & & \\
+\onslide<2->{F} & \onslide<3->{V} & \onslide<4->{F} & & & & & \\
+\onslide<2->{F} & \onslide<3->{F} & \onslide<4->{V} & & & & & \\
+\onslide<2->{F} & \onslide<3->{F} & \onslide<4->{F} & & & & & \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+%==================================================
+\begin{frame}{Passo 3: Coluna $\sim t$}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$x$ & $y$ & $t$ & $\sim t$ & $x \rightarrow y$ & $\sim t \leftrightarrow (x \rightarrow y)$ & $\sim y$ & (1) $\vee$ (2) \\
+\hline
+V & V & V & \onslide<2->{F} & & & & \\
+V & V & F & \onslide<2->{V} & & & & \\
+V & F & V & \onslide<2->{F} & & & & \\
+V & F & F & \onslide<2->{V} & & & & \\
+F & V & V & \onslide<2->{F} & & & & \\
+F & V & F & \onslide<2->{V} & & & & \\
+F & F & V & \onslide<2->{F} & & & & \\
+F & F & F & \onslide<2->{V} & & & & \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+%==================================================
+\begin{frame}{Passo 4: Coluna $x \rightarrow y$}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$x$ & $y$ & $t$ & $\sim t$ & $x \rightarrow y$ & $\sim t \leftrightarrow (x \rightarrow y)$ & $\sim y$ & (1) $\vee$ (2) \\
+\hline
+V & V & V & F & \onslide<2->{V} & & & \\
+V & V & F & V & \onslide<2->{V} & & & \\
+V & F & V & F & \onslide<2->{F} & & & \\
+V & F & F & V & \onslide<2->{F} & & & \\
+F & V & V & F & \onslide<2->{V} & & & \\
+F & V & F & V & \onslide<2->{V} & & & \\
+F & F & V & F & \onslide<2->{V} & & & \\
+F & F & F & V & \onslide<2->{V} & & & \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+%==================================================
+\begin{frame}{Passo 5: Coluna (1)}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$x$ & $y$ & $t$ & $\sim t$ & $x \rightarrow y$ & $\sim t \leftrightarrow (x \rightarrow y)$ & $\sim y$ & (1) $\vee$ (2) \\
+\hline
+V & V & V & F & V & \onslide<2->{F} & & \\
+V & V & F & V & V & \onslide<2->{V} & & \\
+V & F & V & F & F & \onslide<2->{V} & & \\
+V & F & F & V & F & \onslide<2->{F} & & \\
+F & V & V & F & V & \onslide<2->{F} & & \\
+F & V & F & V & V & \onslide<2->{V} & & \\
+F & F & V & F & V & \onslide<2->{F} & & \\
+F & F & F & V & V & \onslide<2->{V} & & \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+%==================================================
+\begin{frame}{Passo 6: Coluna (2)}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$x$ & $y$ & $t$ & $\sim t$ & $x \rightarrow y$ & $\sim t \leftrightarrow (x \rightarrow y)$ & $\sim y$ & (1) $\vee$ (2) \\
+\hline
+V & V & V & F & V & F & \onslide<2->{F} & \\
+V & V & F & V & V & V & \onslide<2->{F} & \\
+V & F & V & F & F & V & \onslide<2->{V} & \\
+V & F & F & V & F & F & \onslide<2->{V} & \\
+F & V & V & F & V & F & \onslide<2->{F} & \\
+F & V & F & V & V & V & \onslide<2->{F} & \\
+F & F & V & F & V & F & \onslide<2->{V} & \\
+F & F & F & V & V & V & \onslide<2->{V} & \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+%==================================================
+\begin{frame}{Passo 7: Coluna Final (3)}
+\begin{center}
+\begin{tabular}{c|c|c||c|c|c|c||c}
+ & & & & & (1) & (2) & (3) \\
+\hline
+$x$ & $y$ & $t$ & $\sim t$ & $x \rightarrow y$ & $\sim t \leftrightarrow (x \rightarrow y)$ & $\sim y$ & (1) $\vee$ (2) \\
+\hline
+V & V & V & F & V & F & F & \onslide<2->{F} \\
+V & V & F & V & V & V & F & \onslide<2->{V} \\
+V & F & V & F & F & V & V & \onslide<2->{V} \\
+V & F & F & V & F & F & V & \onslide<2->{V} \\
+F & V & V & F & V & F & F & \onslide<2->{F} \\
+F & V & F & V & V & V & F & \onslide<2->{V} \\
+F & F & V & F & V & F & V & \onslide<2->{V} \\
+F & F & F & V & V & V & V & \onslide<2->{V} \\
 \end{tabular}
 \end{center}
 \end{frame}
