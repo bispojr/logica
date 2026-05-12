@@ -134,9 +134,12 @@ Aqui você encontra os testes aplicados na disciplina, em formato PDF, para cons
 |---------------|-------|--------|---------------------------------------------------|
 | 🟦 Teste C1.1 | 1     | 07/04  | [📥 Baixar PDF](./testes/lcc-c1.1/ciclo-1/main.pdf)       |
 | 🟦 Teste C1.1 | 2     | 09/04  | [📥 Baixar PDF](./testes/lcc-c1.1/ciclo-2/main.pdf)|
-| 🟦 Teste C1.1 | 3     | 14/04  | [📥 Baixar PDF](./testes/lcc-c1.1/ciclo-3/main.pdf)       ||
-| 🟩 Teste C1.2 | 1     | 07/04  | [📥 Baixar PDF](./testes/lcc-c1.2/main.pdf)       |
-| 🟧 Teste C1.3 | 1     | 07/04  | [📥 Baixar PDF](./testes/lcc-c1.3/main.pdf)       |
+| 🟦 Teste C1.1 | 3     | 14/04  | [📥 Baixar PDF](./testes/lcc-c1.1/ciclo-3/main.pdf)       |
+| 🟩 Teste C1.2 | 1     | 07/04  | [📥 Baixar PDF](./testes/lcc-c1.2/ciclo-1/main.pdf)       |
+| 🟩 Teste C1.2 | 2     | 23/04  | [📥 Baixar PDF](./testes/lcc-c1.2/ciclo-2/main.pdf)       |
+| 🟩 Teste C1.2 | 3     | 28/04  | [📥 Baixar PDF](./testes/lcc-c1.2/ciclo-3/main.pdf)       |
+| 🟧  Teste C1.3 | 1     | 07/04  | [📥 Baixar PDF](./testes/lcc-c1.3/ciclo-1/main.pdf)       |
+| 🟧  Teste C1.3 | 2     | 30/04  | [📥 Baixar PDF](./testes/lcc-c1.3/ciclo-2/main.pdf)       |
 
 ---
 
